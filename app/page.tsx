@@ -27,9 +27,10 @@ import WhatsAppFloat from "@/components/whatsapp-float"
 import Reveal from "@/components/reveal"
 import FaqAccordion from "@/components/faq-accordion"
 import ApplyForm from "@/components/apply-form"
+import EarningsEstimator from "@/components/earnings-estimator"
+import QuickQuestions from "@/components/quick-questions"
 import {
   comparison,
-  earnings,
   faqs,
   milestones,
   privacyPoints,
@@ -200,6 +201,8 @@ export default function HomePage() {
           </div>
         </section>
 
+        <QuickQuestions />
+
         {/* REQUIREMENTS */}
         <section id="requirements" className="section-ivory section-pad paper-texture relative overflow-hidden">
           <div className="container-x">
@@ -310,10 +313,14 @@ export default function HomePage() {
               </p>
             </Reveal>
 
-            <div className="mx-auto mt-12 grid max-w-3xl gap-8 sm:grid-cols-2">
+            <div className="hide-scrollbar -mx-[1.15rem] mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto px-[1.15rem] pb-3 sm:mx-auto sm:mt-12 sm:grid sm:max-w-3xl sm:grid-cols-2 sm:gap-8 sm:overflow-visible sm:px-0 sm:pb-0">
               {videos.map((video, index) => (
-                <Reveal key={video.src} delay={index * 90}>
-                  <figure className="mx-auto w-full max-w-[19rem]">
+                <Reveal
+                  key={video.src}
+                  delay={index * 90}
+                  className="w-[70vw] max-w-[19rem] shrink-0 snap-center sm:w-auto sm:max-w-none"
+                >
+                  <figure className="mx-auto w-full">
                     <div className="border border-gold/25 bg-maroon-deep p-2">
                       <div className="relative aspect-[9/16] bg-black">
                         <video
@@ -341,6 +348,9 @@ export default function HomePage() {
                 </Reveal>
               ))}
             </div>
+            <p className="mt-3 text-center font-label text-[0.5rem] font-semibold uppercase tracking-[0.16em] text-ivory/30 sm:hidden">
+              Swipe karke dono videos dekho →
+            </p>
 
             <Reveal delay={180}>
               <div className="mt-10 flex flex-col items-center gap-4 text-center">
@@ -421,53 +431,7 @@ export default function HomePage() {
               <p className="lead mt-4">Koi target nahi. Apne time par live jao. Payment har week bank mein.</p>
             </Reveal>
 
-            <div className="mt-14 grid gap-5 md:grid-cols-3">
-              {earnings.map((item, index) => (
-                <Reveal key={item.label} delay={index * 80}>
-                  <div
-                    className={`relative flex h-full flex-col p-7 ${
-                      index === 1
-                        ? "border border-maroon bg-maroon text-ivory shadow-[0_26px_60px_-40px_rgba(78,18,28,0.8)]"
-                        : "card-luxe"
-                    }`}
-                  >
-                    {index === 1 && (
-                      <span className="absolute -top-3 left-6 bg-gold px-3 py-1 font-label text-[0.5rem] font-semibold uppercase tracking-[0.16em] text-maroon-deep">
-                        Most popular
-                      </span>
-                    )}
-                    <p
-                      className={`font-label text-[0.58rem] font-semibold uppercase tracking-[0.2em] ${
-                        index === 1 ? "text-gold-bright" : "text-gold-ink"
-                      }`}
-                    >
-                      {item.label}
-                    </p>
-                    <p
-                      className={`mt-4 font-display text-[2rem] leading-none ${
-                        index === 1 ? "text-ivory" : "text-maroon-deep"
-                      }`}
-                    >
-                      {item.range}
-                    </p>
-                    <p
-                      className={`mt-2 text-sm font-semibold ${
-                        index === 1 ? "text-gold-bright" : "text-maroon"
-                      }`}
-                    >
-                      {item.time}
-                    </p>
-                    <p
-                      className={`mt-5 border-t pt-5 text-sm leading-relaxed ${
-                        index === 1 ? "border-gold/25 text-ivory/65" : "border-rule text-ink-muted"
-                      }`}
-                    >
-                      {item.note}
-                    </p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
+            <EarningsEstimator />
 
             <Reveal delay={180}>
               <div className="mt-6 flex flex-col items-start justify-between gap-5 border border-rule bg-white/60 p-5 sm:flex-row sm:items-center sm:p-6">

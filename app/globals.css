@@ -428,6 +428,8 @@
   background: var(--wa-deep);
   border-color: var(--wa-deep);
   color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 30px -20px rgba(11, 107, 56, 1);
 }
 
 .btn-wa:focus-visible {
@@ -533,6 +535,74 @@ select.field-input {
   padding-right: 2.75rem;
 }
 
+/* ---------- Range slider ---------- */
+
+.range-luxe {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 24px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.range-luxe::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--gold) 0%,
+    var(--gold) var(--fill, 50%),
+    rgba(43, 42, 40, 0.12) var(--fill, 50%),
+    rgba(43, 42, 40, 0.12) 100%
+  );
+}
+
+.range-luxe::-moz-range-track {
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(43, 42, 40, 0.12);
+}
+
+.range-luxe::-moz-range-progress {
+  height: 4px;
+  border-radius: 999px;
+  background: var(--gold);
+}
+
+.range-luxe::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 22px;
+  width: 22px;
+  margin-top: -9px;
+  border-radius: 999px;
+  background: var(--maroon);
+  border: 3px solid var(--ivory-2);
+  box-shadow: 0 2px 10px rgba(78, 18, 28, 0.35), 0 0 0 1px var(--gold);
+  transition: transform 0.15s ease;
+}
+
+.range-luxe::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 999px;
+  background: var(--maroon);
+  border: 3px solid var(--ivory-2);
+  box-shadow: 0 2px 10px rgba(78, 18, 28, 0.35), 0 0 0 1px var(--gold);
+}
+
+.range-luxe:active::-webkit-slider-thumb {
+  transform: scale(1.12);
+}
+
+.range-luxe:focus-visible {
+  outline: none;
+}
+
+.range-luxe:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px rgba(196, 162, 106, 0.35), 0 0 0 1px var(--gold);
+}
+
 /* ---------- Marquee ---------- */
 
 .marquee {
@@ -586,6 +656,21 @@ select.field-input {
   border: 1px solid currentColor;
   opacity: 0.6;
   animation: pulse-ring 2.4s ease-out infinite;
+}
+
+.pop-in {
+  animation: pop-in 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @keyframes pulse-ring {
@@ -771,6 +856,28 @@ select.field-input {
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+@media (max-width: 639px) {
+  .section-pad {
+    padding-block: 3.4rem;
+  }
+
+  .container-x {
+    padding-inline: 1.15rem;
+  }
+}
+
+@media (hover: none) {
+  .card-luxe:active,
+  .card-white:active,
+  .card-dark:active {
+    transform: scale(0.995);
+  }
+}
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -783,7 +890,8 @@ select.field-input {
     transition: none;
   }
   .marquee-track,
-  .pulse-dot::after {
+  .pulse-dot::after,
+  .pop-in {
     animation: none;
   }
   * {

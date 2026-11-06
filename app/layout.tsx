@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import ScrollProgress from "@/components/scroll-progress"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -49,6 +50,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <Suspense fallback={null}>{children}</Suspense>
+        <ScrollProgress />
         <Analytics />
       </body>
     </html>
