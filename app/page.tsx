@@ -271,30 +271,31 @@ export default function HomePage() {
                 })}
 
                 <Reveal delay={240}>
-                  <div className="flex flex-col gap-4 border border-gold/30 bg-ivory-2 p-5 sm:flex-row sm:items-center sm:justify-between">
-                    <div className="flex items-start gap-3">
-                      <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-gold/50 text-maroon">
-                        <EyeOff className="h-4 w-4" />
-                      </span>
-                      <div>
-                        <p className="font-display text-[1.05rem] text-maroon-deep">
-                          Niqab, hijab ya mask? Bilkul allowed.
-                        </p>
-                        <p className="mt-1 text-xs leading-relaxed text-ink-muted">
-                          Couple ya lesbian creators bhi welcome — dono ki age 18+ aur ID zaroori.
-                        </p>
-                      </div>
+                  <a
+                    href={waLink("Hi! Face cover karke kaam kar sakti hoon? Please guide karo.")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Niqab, hijab, mask, couple ya lesbian creators ke baare mein WhatsApp par poocho"
+                    className="group flex items-center gap-3 border border-gold/30 bg-ivory-2 p-4 transition-colors hover:border-gold/60 hover:bg-white sm:gap-4 sm:p-5"
+                  >
+                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-gold/50 text-maroon">
+                      <EyeOff className="h-4 w-4" />
+                    </span>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-display text-[1rem] leading-snug text-maroon-deep sm:text-[1.05rem]">
+                        Niqab, hijab ya mask? Bilkul allowed.
+                      </p>
+                      <p className="mt-1 text-[0.72rem] leading-relaxed text-ink-muted sm:text-xs">
+                        Couple ya lesbian creators bhi welcome — dono ki age 18+ aur ID zaroori.
+                      </p>
                     </div>
-                    <a
-                      href={waLink("Hi! Face cover karke kaam kar sakti hoon? Please guide karo.")}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-base btn-wa-outline shrink-0 px-4 py-3 text-[0.58rem]"
-                    >
-                      Poocho
-                      <ArrowUpRight className="h-3.5 w-3.5" />
-                    </a>
-                  </div>
+                    <span className="flex shrink-0 items-center gap-2 font-label text-[0.52rem] font-semibold uppercase tracking-[0.14em] text-maroon">
+                      <span className="hidden sm:inline">Poocho</span>
+                      <span className="grid h-8 w-8 place-items-center rounded-full border border-gold/50 transition-colors group-hover:border-maroon group-hover:bg-maroon group-hover:text-ivory">
+                        <ArrowUpRight className="h-3.5 w-3.5" />
+                      </span>
+                    </span>
+                  </a>
                 </Reveal>
               </div>
             </div>
