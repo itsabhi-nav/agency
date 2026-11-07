@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react"
+import { ArrowRight, ArrowUpRight } from "lucide-react"
 import WhatsAppIcon from "@/components/whatsapp-icon"
 import { waLink } from "@/lib/site"
 
@@ -30,24 +30,30 @@ export default function QuickQuestions() {
     <section className="border-b border-rule bg-ivory-2 py-7 sm:py-8" aria-label="Quick WhatsApp questions">
       <div className="container-x">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-          <div className="flex items-center gap-3">
-            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-wa/10 text-wa-deep">
-              <WhatsAppIcon className="h-4 w-4" />
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-wa/10 text-wa-deep">
+                <WhatsAppIcon className="h-4 w-4" />
+              </span>
+              <p className="text-[0.82rem] leading-snug text-ink-muted">
+                <span className="font-display text-[1.02rem] text-maroon-deep">Turant jawab chahiye?</span>
+                <span className="hidden sm:inline lg:hidden"> Seedha WhatsApp par poocho —</span>
+              </p>
+            </div>
+            <span className="flex shrink-0 items-center gap-1 font-label text-[0.46rem] font-semibold uppercase tracking-[0.14em] text-ink-muted/60 sm:hidden">
+              Swipe
+              <ArrowRight className="h-3 w-3" />
             </span>
-            <p className="text-[0.82rem] leading-snug text-ink-muted">
-              <span className="font-display text-[1.02rem] text-maroon-deep">Turant jawab chahiye?</span>
-              <span className="hidden sm:inline lg:hidden"> Seedha WhatsApp par poocho —</span>
-            </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
+          <div className="hide-scrollbar -mx-[1.15rem] flex gap-2 overflow-x-auto px-[1.15rem] pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0">
             {questions.map((question) => (
               <a
                 key={question.label}
                 href={waLink(question.message)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex min-h-[46px] w-full items-center justify-between gap-2 border border-rule bg-white px-3 py-2.5 text-left font-label text-[0.54rem] font-semibold uppercase leading-snug tracking-[0.08em] text-charcoal transition-colors hover:border-wa/50 hover:bg-wa/[0.06] hover:text-wa-deep sm:inline-flex sm:min-h-[44px] sm:w-auto sm:justify-start sm:gap-1.5 sm:px-3.5 sm:text-[0.56rem] sm:tracking-[0.1em] last:col-span-2 sm:last:col-span-1"
+                className="group inline-flex min-h-[46px] shrink-0 items-center gap-1.5 border border-rule bg-white px-3.5 py-2.5 font-label text-[0.56rem] font-semibold uppercase tracking-[0.1em] text-charcoal transition-colors hover:border-wa/50 hover:bg-wa/[0.06] hover:text-wa-deep"
               >
                 {question.label}
                 <ArrowUpRight className="h-3 w-3 shrink-0 text-gold-ink transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
