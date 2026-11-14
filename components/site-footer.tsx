@@ -15,8 +15,8 @@ export default function SiteFooter() {
           <div>
             <Logo tone="dark" />
             <p className="mt-6 max-w-md text-sm leading-relaxed text-ivory/65">
-              India ki verified Stripchat creator agency. 18+ women ke liye safe, private aur free live-streaming
-              opportunity — proper guidance ke saath.
+              Stripchat ke official rules par chalne wali India ki verified creator agency. 18+ women aur
+              couples ke liye safe aur private live streaming, proper guidance ke saath.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
@@ -53,7 +53,7 @@ export default function SiteFooter() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="group inline-flex items-center gap-1.5 text-sm text-ivory/70 transition-colors hover:text-gold-bright"
+                      className="group inline-flex min-h-[44px] items-center gap-1.5 text-sm text-ivory/70 transition-colors hover:text-gold-bright"
                     >
                       {link.label}
                       <ArrowUpRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" />
@@ -71,7 +71,7 @@ export default function SiteFooter() {
                 <li>
                   <a
                     href={`tel:${site.phoneRaw}`}
-                    className="flex items-center gap-2.5 text-sm text-ivory/70 transition-colors hover:text-gold-bright"
+                    className="flex min-h-[44px] items-center gap-2.5 text-sm text-ivory/70 transition-colors hover:text-gold-bright"
                   >
                     <Phone className="h-3.5 w-3.5 text-gold" />
                     {site.phoneDisplay}
@@ -80,7 +80,7 @@ export default function SiteFooter() {
                 <li>
                   <a
                     href={`mailto:${site.email}`}
-                    className="flex items-center gap-2.5 text-sm text-ivory/70 transition-colors hover:text-gold-bright"
+                    className="flex min-h-[44px] items-center gap-2.5 text-sm text-ivory/70 transition-colors hover:text-gold-bright"
                   >
                     <Mail className="h-3.5 w-3.5 text-gold" />
                     {site.email}
@@ -92,13 +92,13 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-12 border border-gold/20 bg-ivory/[0.03] p-5 text-[0.72rem] leading-relaxed text-ivory/45 sm:p-6">
+        <div className="mt-12 border border-gold/20 bg-ivory/[0.03] p-5 text-[0.8rem] leading-relaxed text-ivory/55 sm:p-6 sm:text-[0.72rem] sm:text-ivory/45">
           <strong className="font-label text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-gold/80">
             Important:
           </strong>{" "}
           Ye website sirf 18 saal ya usse zyada age ki women ke liye hai. Stripchat ek adult live-streaming platform
-          hai. Hum ek independent creator management agency hain. Website par dikhayi gayi income indicative hai —
-          aapke time, consistency aur audience par depend karti hai. Ye income guarantee nahi hai. Kabhi bhi kisi ko
+          hai. Hum ek independent creator management agency hain. Website par dikhayi gayi income indicative
+          hai aur aapke time, consistency aur audience par depend karti hai. Ye income guarantee nahi hai. Kabhi bhi kisi ko
           OTP, bank password ya paisa mat bhejiye.
         </div>
 

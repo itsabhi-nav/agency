@@ -19,9 +19,19 @@ import FaqAccordion from "@/components/faq-accordion"
 import { faqs, privacyPoints, site, switchPoints, waLink } from "@/lib/site"
 
 export const metadata: Metadata = {
-  title: "Madad — Help & safety",
+  title: "Madad · Help & safety",
   description:
     "Stripchat India Agency se baat karo. WhatsApp, call ya email. Privacy, safety, payment aur agency switch se judi madad. 18+ only.",
+  alternates: {
+    canonical: "/help",
+  },
+  openGraph: {
+    title: "Madad · Help & safety · Stripchat India Agency",
+    description:
+      "WhatsApp, call ya email. Privacy, safety, payment aur agency switch se judi madad.",
+    url: "https://stripchatagency.in/help",
+    images: ["/images/brand/hero-heart.jpg"],
+  },
 }
 
 export default function HelpPage() {
@@ -50,7 +60,7 @@ export default function HelpPage() {
                 <span className="display-italic">Koi pressure nahi.</span>
               </h1>
               <p className="mt-5 max-w-xl text-[1.02rem] leading-relaxed text-ivory/65">
-                Payment, privacy, safety ya agency switch — jo bhi sawaal ho, seedha poocho. Real insaan reply karega.
+                Payment, privacy, safety ya agency switch, jo bhi sawaal ho seedha poocho. Real insaan reply karega.
               </p>
             </Reveal>
 
@@ -116,8 +126,8 @@ export default function HelpPage() {
                 <p className="eyebrow">Safety &amp; privacy</p>
                 <h2 className="display-2 mt-5 text-maroon-deep">Aap safe ho. Bas.</h2>
                 <p className="lead mt-4">
-                  Aapki real identity, number aur address public nahi hote. Face cover, stage name aur geo-block —
-                  sab available hai.
+                  Aapki real identity, number aur address public nahi hote. Face cover, stage name aur
+                  geo-block sab available hain.
                 </p>
                 <div className="mt-7 border border-gold/30 bg-ivory-2 p-5">
                   <div className="flex items-start gap-3">
@@ -167,8 +177,8 @@ export default function HelpPage() {
                 <p className="eyebrow text-gold-bright">Agency switch</p>
                 <h2 className="display-2 mt-5 text-ivory">Purani agency se pareshan ho?</h2>
                 <p className="mt-4 text-[1.02rem] leading-relaxed text-ivory/65">
-                  Low token rate, late payment, work pressure ya block ka dar — in sab ka solution hai. Switch karo,
-                  tension chhodo.
+                  Low token rate, late payment, work pressure ya block ka dar. In sab ka solution hai.
+                  Switch karo aur tension chhodo.
                 </p>
                 <a
                   href={waLink("Hi! Main agency switch karna chahti hoon. Please guide karo.")}
@@ -211,7 +221,7 @@ export default function HelpPage() {
                 <p className="eyebrow">FAQ</p>
                 <h2 className="display-2 mt-5 text-maroon-deep">Sab jawab, simple bhasha mein.</h2>
                 <p className="lead mt-4">
-                  Phir bhi kuch clear na ho toh WhatsApp par message karo — hum step-by-step samjhayenge.
+                  Phir bhi kuch clear na ho toh WhatsApp par message karo, hum step-by-step samjhayenge.
                 </p>
                 <a
                   href={waLink("Hi! Mera ek sawaal hai.")}
@@ -240,7 +250,7 @@ export default function HelpPage() {
               <p className="eyebrow eyebrow-center text-gold">Ready ho?</p>
               <h2 className="display-3 mt-4 text-ivory">Bas ek message. Baaki hum sambhalte hain.</h2>
               <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-ivory/60">
-                Free registration, Hindi guidance aur weekly payment — bina kisi pressure ke.
+                Free registration, Hindi guidance aur weekly payment, bina kisi pressure ke.
               </p>
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a

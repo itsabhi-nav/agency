@@ -59,7 +59,7 @@ export default function ApplyForm() {
         </span>
         <h3 className="display-3 mt-6 text-maroon-deep">Bas ek step baaki!</h3>
         <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink-muted">
-          WhatsApp khul gaya hai — bas <strong className="font-bold text-maroon-deep">Send</strong> dabaiye. Agar nahi
+          WhatsApp khul gaya hai. Bas <strong className="font-bold text-maroon-deep">Send</strong> dabaiye. Agar nahi
           khula, neeche wale button se dobara try karein.
         </p>
 
@@ -167,7 +167,7 @@ export default function ApplyForm() {
             setAge(e.target.checked)
             if (error) setError("")
           }}
-          className="mt-0.5 h-5 w-5 shrink-0 accent-[#6e1b27]"
+          className="mt-1 h-6 w-6 shrink-0 accent-[#6e1b27]"
           required
         />
         <span className="text-[0.8rem] leading-relaxed text-ink-muted">

@@ -37,25 +37,27 @@ export default function WhatsAppFloat() {
             className="flex min-h-[52px] flex-1 items-center justify-center gap-2.5 rounded-[2px] bg-wa px-4 py-2.5 text-white shadow-[0_10px_24px_-18px_rgba(11,107,56,0.9)] active:scale-[0.99]"
           >
             <WhatsAppIcon className="h-[18px] w-[18px] shrink-0" />
-            <span className="flex flex-col items-start leading-tight">
-              <span className="font-label text-[0.64rem] font-semibold uppercase tracking-[0.12em]">
+            <span className="flex min-w-0 flex-col items-start leading-tight">
+              <span className="whitespace-nowrap font-label text-[0.64rem] font-semibold uppercase tracking-[0.1em]">
                 WhatsApp par join karo
               </span>
-              <span className="mt-0.5 text-[0.54rem] font-medium text-white/75">Free · 30 second · 18+</span>
+              <span className="mt-0.5 whitespace-nowrap text-[0.54rem] font-medium text-white/75">
+                Free · 30 second · 18+
+              </span>
             </span>
-            <ArrowUpRight className="hidden h-4 w-4 shrink-0 min-[360px]:block" />
+            <ArrowUpRight className="hidden h-4 w-4 shrink-0 min-[430px]:block" />
           </a>
           <a
             href={`tel:${site.phoneRaw}`}
             aria-label="Call us"
-            className="grid h-[52px] w-11 shrink-0 place-items-center rounded-[2px] border border-gold/40 text-gold-bright active:scale-[0.97]"
+            className="grid h-[52px] w-10 shrink-0 place-items-center rounded-[2px] border border-gold/40 text-gold-bright active:scale-[0.97]"
           >
             <Phone className="h-[18px] w-[18px]" />
           </a>
           <Link
             href="/help"
             aria-label="Madad / Help"
-            className="grid h-[52px] w-11 shrink-0 place-items-center rounded-[2px] border border-gold/40 text-gold-bright active:scale-[0.97]"
+            className="grid h-[52px] w-10 shrink-0 place-items-center rounded-[2px] border border-gold/40 text-gold-bright active:scale-[0.97]"
           >
             <HelpCircle className="h-[18px] w-[18px]" />
           </Link>

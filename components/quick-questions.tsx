@@ -37,7 +37,7 @@ export default function QuickQuestions() {
               </span>
               <p className="text-[0.82rem] leading-snug text-ink-muted">
                 <span className="font-display text-[1.02rem] text-maroon-deep">Turant jawab chahiye?</span>
-                <span className="hidden sm:inline lg:hidden"> Seedha WhatsApp par poocho —</span>
+                <span className="hidden sm:inline lg:hidden"> Seedha WhatsApp par poocho</span>
               </p>
             </div>
             <span className="flex shrink-0 items-center gap-1 font-label text-[0.46rem] font-semibold uppercase tracking-[0.14em] text-ink-muted/60 sm:hidden">

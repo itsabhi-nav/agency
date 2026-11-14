@@ -9,9 +9,19 @@ import ApplyForm from "@/components/apply-form"
 import { site, steps, waLink } from "@/lib/site"
 
 export const metadata: Metadata = {
-  title: "Apply — 30 second",
+  title: "Apply · 30 second",
   description:
-    "Stripchat India Agency ke saath free registration. Bas naam aur city bharo — WhatsApp par baat karke aage badhein. 18+ only, koi joining fee nahi.",
+    "Stripchat India Agency ke saath free registration. Bas naam aur city bharo, WhatsApp par baat karke aage badhein. 18+ only, koi joining fee nahi.",
+  alternates: {
+    canonical: "/apply",
+  },
+  openGraph: {
+    title: "Apply · Stripchat India Agency",
+    description:
+      "Free registration. Bas naam aur city bharo aur WhatsApp par aage badhein. 18+ only, koi joining fee nahi.",
+    url: "https://stripchatagency.in/apply",
+    images: ["/images/brand/hero-heart.jpg"],
+  },
 }
 
 export default function ApplyPage() {
@@ -50,13 +60,13 @@ export default function ApplyPage() {
                 </h1>
 
                 <p className="mt-5 max-w-lg text-[1.02rem] leading-relaxed text-ivory/65">
-                  Naam aur city bharo. Hum WhatsApp par baat karke pura process samjhayenge — account, training,
-                  privacy aur payment. Koi paisa nahi lagega.
+                  Naam aur city bharo. Hum poori process samjhayenge, account se payment tak. Koi paisa
+                  nahi lagega.
                 </p>
 
                 <ul className="mt-8 hidden space-y-3.5 sm:block">
                   {[
-                    "Koi joining fee nahi — ₹0",
+                    "Koi joining fee nahi",
                     "Account aur training free",
                     "Face cover / mask allowed",
                     "Payment weekly, bank mein",

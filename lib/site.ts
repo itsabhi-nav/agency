@@ -10,13 +10,14 @@ export const site = {
   hours: "Mon–Sun · 9:00 AM – 2:00 AM IST",
   nav: [
     { href: "/", label: "Home" },
+    { href: "/#about", label: "Agency" },
     { href: "/apply", label: "Apply" },
     { href: "/help", label: "Madad" },
   ],
   stats: [
-    { value: "₹30k–90k", label: "Monthly earning*" },
+    { value: "Verified", label: "Stripchat agency" },
     { value: "Weekly", label: "Payment" },
-    { value: "₹0", label: "Joining fee" },
+    { value: "₹30k–90k+", label: "Monthly earning*" },
     { value: "18+", label: "Only" },
   ],
   images: {
@@ -37,20 +38,28 @@ export function waLink(message = site.applyMessage) {
 
 export const trustPoints = ["Free joining", "Weekly payment", "Face cover allowed", "100% private"]
 
+export const credentials = [
+  "Verified Stripchat agency",
+  "Written agreement",
+  "Weekly bank payout",
+  "18+ compliance",
+  "No joining fee",
+]
+
 export const videos = [
   {
     src: "/videos/stripchat-explainer.mp4",
     poster: "/videos/stripchat-explainer-poster.jpg",
     label: "Kaam kaise hota hai?",
     duration: "1 min",
-    caption: "Stripchat par account, kamai aur payout — simple Hindi mein.",
+    caption: "Account, kamai aur payout ka pura process, simple Hindi mein.",
   },
   {
     src: "/videos/creator-promo.mp4",
     poster: "/videos/creator-promo-poster.jpg",
     label: "Ghar ka setup",
     duration: "20 sec",
-    caption: "Ek phone, ek ring light aur internet — bas itna hi chahiye.",
+    caption: "Ek phone, ek ring light aur internet. Bas itna hi chahiye.",
   },
 ]
 
@@ -76,7 +85,7 @@ export const steps = [
   {
     step: "01",
     title: "WhatsApp par message karo",
-    body: "Neeche wale button se seedha WhatsApp khulega. Bas 'Hi' bhejo — hum turant reply karenge.",
+    body: "Neeche wale button se WhatsApp khulega. Bas 'Hi' bhejo, hum turant reply karenge.",
     meta: "30 second",
   },
   {
@@ -117,7 +126,7 @@ export const earnings = [
 export const privacyPoints = [
   {
     title: "Face cover, mask, niqab ya hijab",
-    body: "Aapka face chhupa hua rahega. Sirf aapki marzi — koi pressure nahi.",
+    body: "Aapka face chhupa rahega. Sirf aapki marzi, koi pressure nahi.",
   },
   {
     title: "Stage name, real name nahi",
@@ -140,6 +149,108 @@ export const switchPoints = [
   "Account block ho gaya ya warning aa rahi hai?",
 ]
 
+/* --- Fake agents ke scams & blackmail tactics --- */
+export const scams = [
+  {
+    icon: "tokens",
+    tag: "Token scam",
+    title: "Lalach dekar join karwana",
+    body: "Market se upar token rate bolte hain. Join hote hi rate aadha kar dete hain, saath me roz target ka pressure.",
+  },
+  {
+    icon: "payment",
+    tag: "No safe payment",
+    title: "Payment safe hi nahi hoti",
+    body: "Unsafe payment channel ya off-record cash. Kabhi payment adhoori, kabhi poora account freeze.",
+  },
+  {
+    icon: "document",
+    tag: "Document misuse",
+    title: "Aapke ID se fake account",
+    body: "ID lekar aapke naam par fake account banate hain. Isse blacklist aur legal dikkat ho sakti hai. Documents sirf platform KYC ke liye.",
+  },
+  {
+    icon: "lock",
+    tag: "Fresher alert",
+    title: "Surname add karke account lock",
+    body: "Bina bataye profile par surname add kar dete hain. Account agent ke naam par lock ho jaata hai aur aap kahin aur kaam nahi kar sakti. Aadhar ki PDF hamesha apne paas rakhein.",
+  },
+  {
+    icon: "blackmail",
+    tag: "Blackmail",
+    title: "Dhamki: paisa do, warna viral",
+    body: "Screenshot ya video lekar dhamkate hain. Paisa mat dein. Turant cybercrime.gov.in ya 1930 par report karein.",
+  },
+  {
+    icon: "pressure",
+    tag: "Pressure",
+    title: "Face reveal, reply band, dar",
+    body: "Join ke baad face reveal ki demand, message ka jawab band aur block ka dar. Ye control ke signal hain, guidance ke nahi.",
+  },
+]
+
+/* --- Legal rules & guidelines for Indian models --- */
+export const legalRules = [
+  {
+    title: "Sirf 18+ · valid ID se",
+    body: "Age verify hona zaroori hai, Aadhaar ya PAN se. Couple me dono 18+. Jo ID lagai, wahi live karegi, koi aur nahi.",
+  },
+  {
+    title: "Consent sabse pehle",
+    body: "Kisi ka clip ya screenshot bina consent ke share karna galat hai. Apna content chori ho toh report karein.",
+  },
+  {
+    title: "Platform rules ka paalan",
+    body: "Stripchat ki terms, geo/location rules aur prohibited content list follow karo. Rule break ka seedha matlab hai account suspend.",
+  },
+  {
+    title: "Tax aur record rakho",
+    body: "Income par ITR file karein. Hum GST aur tax pay karte hain aur har payment ka record dete hain.",
+  },
+  {
+    title: "Documents kabhi mat do",
+    body: "ID sirf platform KYC me jaati hai. Kisi agent, WhatsApp group ya 'helper' ko Aadhaar/PAN ki PDF kabhi mat bhejo.",
+  },
+  {
+    title: "Blackmail ek crime hai",
+    body: "Sextortion ya dhamki mil rahi hai? Paisa mat dein. Turant cybercrime.gov.in ya 1930 par report karein. Chup rehna sabse badi galti.",
+  },
+]
+
+/* --- Authorized agency kyun --- */
+export const authorizedPillars = [
+  {
+    icon: "safety",
+    label: "Safety",
+    title: "Account safe rehta hai",
+    points: [
+      "Written agreement aur rules-based setup",
+      "Rules ke saath chalta account, block ka risk kam",
+      "Koi dhamki, koi random target, koi harassment nahi",
+    ],
+  },
+  {
+    icon: "privacy",
+    label: "Privacy",
+    title: "Aapki pehchaan sirf aapki",
+    points: [
+      "Face cover, mask, niqab sab allowed",
+      "Stage name, geo-block aur private details",
+      "Documents sirf aapke paas",
+    ],
+  },
+  {
+    icon: "earnings",
+    label: "Legal earnings",
+    title: "Seedha bank, sab kagaz par",
+    points: [
+      "Weekly payment, time par aur poori amount",
+      "GST aur tax agency pay karti hai",
+      "Fix token rate, koi hidden cut nahi",
+    ],
+  },
+]
+
 export const whyUs = [
   {
     icon: "verified",
@@ -149,7 +260,7 @@ export const whyUs = [
   {
     icon: "shield",
     title: "Account safe rehta hai",
-    body: "Rules ke saath account banate hain — ek chhoti galti se account block nahi hota.",
+    body: "Rules ke saath account banate hain. Ek chhoti galti se block nahi hota.",
   },
   {
     icon: "wallet",
@@ -166,7 +277,7 @@ export const whyUs = [
 export const faqs = [
   {
     q: "Kya mujhe pehle se experience chahiye?",
-    a: "Nahi. Complete beginner bhi start kar sakti hai. Hum account banana, lighting, camera angle aur baat karne ka tarika — sab free sikhate hain.",
+    a: "Nahi. Complete beginner bhi start kar sakti hai. Hum account banana, lighting, camera angle aur baat karne ka tarika sab free sikhate hain.",
   },
   {
     q: "Kya joining ke liye paise lagte hain?",
@@ -174,11 +285,11 @@ export const faqs = [
   },
   {
     q: "Payment kab aur kaise milti hai?",
-    a: "Payment weekly hoti hai aur seedha aapke bank account mein aati hai. Har payment ka record milta hai — koi hidden cut nahi.",
+    a: "Payment weekly hoti hai aur seedha aapke bank account mein aati hai. Har payment ka record milta hai, koi hidden cut nahi.",
   },
   {
     q: "Kya main face chhupa kar live ja sakti hoon?",
-    a: "Haan. Mask, niqab, hijab ya face cover — aapki marzi. Aap stage name bhi use kar sakti hain aur apna city geo-block kar sakti hain.",
+    a: "Haan. Mask, niqab, hijab ya face cover, sab aapki marzi. Aap stage name bhi use kar sakti hain aur apna city geo-block kar sakti hain.",
   },
   {
     q: "Kya ye safe aur legal hai?",
@@ -219,6 +330,24 @@ export const comparison = {
       "Face reveal ka pressure",
       "Block ka constant dar",
     ],
+    deep: [
+      {
+        title: "Token scam: lalach dekar join karwana",
+        body: "Market se upar rate bolte hain, join hote hi aadha kar dete hain. Saath me roz target ka work pressure.",
+      },
+      {
+        title: "No safe payment: account freeze",
+        body: "Unsafe payment channel se kabhi account freeze, kabhi payment ud jaati hai.",
+      },
+      {
+        title: "Aapke documents ka misuse",
+        body: "ID lekar aapke naam se fake account banaya ja sakta hai. Isliye documents sirf platform KYC ke liye.",
+      },
+      {
+        title: "Surname add karke account lock",
+        body: "Fresher ka account agent ke naam par lock ho jaata hai aur kahin aur kaam nahi kar paati. Aadhar ki PDF hamesha apne paas rakhein.",
+      },
+    ],
   },
   us: {
     title: "Stripchat India Agency",
@@ -229,6 +358,24 @@ export const comparison = {
       "Hindi support, daily reply",
       "Face cover, mask, niqab allowed",
       "Rules-based setup, safe account",
+    ],
+    deep: [
+      {
+        title: "Token rate fix, achhe kaam par badhta bhi hai",
+        body: "Jo rate bola wahi milega. Achhi performance par rate upgrade, bina negotiation ke.",
+      },
+      {
+        title: "Safe payment, GST aur tax ke saath",
+        body: "Har week time par, seedha bank me. Delhi NCR me cash ka option bhi. Long term tak on time.",
+      },
+      {
+        title: "Proper rules, guidance aur training",
+        body: "Written rules aur free training se aapka account long term tak secure rehta hai.",
+      },
+      {
+        title: "No work pressure, loyalty dono taraf",
+        body: "Koi daily target nahi. Aap khush rahogi toh dusri girls bhi bataengi. Humein bhi grow hona hai, saath lambe tak.",
+      },
     ],
   },
 }

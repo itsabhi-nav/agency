@@ -23,7 +23,7 @@ export default function NotFound() {
               <span className="display-italic">Par aap ho sakti ho.</span>
             </h1>
             <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-ivory/55">
-              Link galat ho sakta hai ya page move ho gaya. Chalo wapas home chalein — ya seedha humse baat karein.
+              Link galat ho sakta hai ya page move ho gaya. Chalo wapas home chalein, ya seedha humse baat karein.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <Link href="/" className="btn-base btn-rose px-6 py-3.5 text-[0.64rem]">

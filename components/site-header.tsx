@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { ArrowUpRight, Menu, Phone, X } from "lucide-react"
+import { ArrowUpRight, BadgeCheck, Menu, Phone, X } from "lucide-react"
 import WhatsAppIcon from "@/components/whatsapp-icon"
 import Logo from "@/components/logo"
 import { site, waLink } from "@/lib/site"
@@ -36,12 +36,13 @@ export default function SiteHeader() {
   return (
     <>
       <div className="relative z-40 bg-maroon-deep">
-        <div className="container-x flex h-9 items-center justify-center gap-3 text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-ivory/70 sm:justify-between">
-          <p className="flex items-center gap-2">
-            <span className="pulse-dot relative inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-gold text-gold" />
-            <span>
-              18+ only <span className="mx-1.5 text-gold/40">·</span> Free registration
-              <span className="mx-1.5 text-gold/40">·</span> Verified agency
+        <div className="top-strip container-x flex min-h-9 items-center justify-center gap-2 py-1.5 text-center font-semibold uppercase leading-[1.5] text-ivory/70 sm:h-9 sm:justify-between sm:gap-3 sm:py-0">
+          <p className="flex min-w-0 items-center gap-1.5 sm:gap-2">
+            <BadgeCheck className="h-3.5 w-3.5 shrink-0 text-gold-bright" />
+            <span className="min-w-0">
+              Verified Stripchat agency
+              <span className="mx-1.5 text-gold/40">·</span> 18+ only
+              <span className="mx-1.5 text-gold/40">·</span> Free registration
             </span>
           </p>
           <span className="hidden items-center gap-1.5 text-gold-bright sm:flex">

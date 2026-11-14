@@ -2,20 +2,26 @@ import Image from "next/image"
 import Link from "next/link"
 import {
   AlertCircle,
+  AlertTriangle,
   ArrowRight,
   ArrowUpRight,
   BadgeCheck,
   Check,
   Clock,
   EyeOff,
+  FileWarning,
   Headset,
   Heart,
   Home,
+  Lock,
   MapPin,
   Phone,
+  Scale,
+  ShieldAlert,
   ShieldCheck,
   Smartphone,
   Sparkles,
+  TrendingDown,
   UserRound,
   Wallet,
   X,
@@ -30,11 +36,15 @@ import ApplyForm from "@/components/apply-form"
 import EarningsEstimator from "@/components/earnings-estimator"
 import QuickQuestions from "@/components/quick-questions"
 import {
+  authorizedPillars,
   comparison,
+  credentials,
   faqs,
+  legalRules,
   milestones,
   privacyPoints,
   requirements,
+  scams,
   site,
   steps,
   switchPoints,
@@ -48,6 +58,21 @@ const requirementIcons = {
   age: BadgeCheck,
   phone: Smartphone,
   clock: Clock,
+} as const
+
+const scamIcons = {
+  tokens: TrendingDown,
+  payment: Wallet,
+  document: FileWarning,
+  lock: Lock,
+  blackmail: ShieldAlert,
+  pressure: AlertTriangle,
+} as const
+
+const pillarIcons = {
+  safety: ShieldCheck,
+  privacy: EyeOff,
+  earnings: Wallet,
 } as const
 
 const whyIcons = {
@@ -74,24 +99,37 @@ export default function HomePage() {
           <div className="container-x relative grid items-center gap-14 pb-16 pt-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16 lg:pb-24 lg:pt-20">
             <Reveal>
               <div className="inline-flex items-center gap-2.5 border border-gold/35 bg-gold/[0.07] px-4 py-2">
-                <span className="pulse-dot relative h-1.5 w-1.5 rounded-full bg-gold text-gold" />
+                <BadgeCheck className="h-4 w-4 text-gold-bright" />
                 <span className="font-label text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-gold-bright">
-                  India ki verified Stripchat agency
+                  Verified Stripchat agency · India
                 </span>
               </div>
 
               <h1 className="display-1 mt-7 text-ivory">
-                Ghar se live ho.
+                India ki verified
                 <br />
-                <span className="display-italic">₹30k–₹90k</span>
+                Stripchat agency.
                 <br />
-                har mahine kamao.
+                <span className="display-italic">Ghar se live ho.</span>
               </h1>
 
               <p className="mt-6 max-w-xl text-[1.02rem] leading-relaxed text-ivory/65 sm:text-[1.08rem]">
-                Ghar se ya kahin se bhi — sirf 2–3 ghante, mobile aur internet. Koi investment nahi, koi target
-                nahi. Face cover karke bhi kaam kar sakti hain, poori privacy ke saath.
+                Girls aur couples ke liye ghar se live streaming. Account, training aur privacy hum
+                sambhalte hain. Fresher aur experienced dono welcome hain. Sirf 2–3 ghante, mobile aur
+                internet, investment nahi, face cover allowed.
               </p>
+
+              <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3">
+                <div className="shrink-0 border border-gold/35 bg-gold/[0.08] px-5 py-3">
+                  <p className="font-display text-[1.7rem] leading-none text-gold-bright">₹30k–₹90k+</p>
+                  <p className="mt-1.5 font-label text-[0.5rem] font-semibold uppercase tracking-[0.16em] text-ivory/55">
+                    Monthly earning*
+                  </p>
+                </div>
+                <p className="max-w-[17rem] text-[0.76rem] leading-relaxed text-ivory/50">
+                  *Aapke time aur consistency par depend karti hai. Payment har week, seedha bank mein.
+                </p>
+              </div>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <a
@@ -138,7 +176,7 @@ export default function HomePage() {
                   <div className="image-zoom relative aspect-[4/5] overflow-hidden bg-maroon-deep">
                     <Image
                       src="/videos/creator-promo-poster.jpg"
-                      alt="Ghar ka live streaming setup — phone aur ring light"
+                      alt="Ghar ka live streaming setup, phone aur ring light"
                       fill
                       priority
                       sizes="(max-width: 1024px) 88vw, 460px"
@@ -196,7 +234,7 @@ export default function HomePage() {
               ))}
             </div>
             <p className="border-t border-gold/10 py-3 text-center text-[0.58rem] font-semibold uppercase tracking-[0.1em] text-ivory/30">
-              *Income indicative hai — aapke time aur consistency par depend karti hai.
+              *Income indicative hai. Actual kamai aapke time aur consistency par depend karti hai.
             </p>
           </div>
         </section>
@@ -208,9 +246,10 @@ export default function HomePage() {
           <div className="container-x">
             <Reveal className="mx-auto max-w-2xl text-center">
               <p className="eyebrow eyebrow-center">Bas itna chahiye</p>
-              <h2 className="display-2 mt-5 text-maroon-deep">Koi degree nahi. Koi paisa nahi.</h2>
+              <h2 className="display-2 mt-5 text-maroon-deep">Koi degree nahi. Kuch skills chahiye.</h2>
               <p className="lead mt-4">
-                Teen simple cheezein. Baaki sab — account, training, privacy — hum sambhalte hain.
+                Hard work, acting aur baat karne ki skills. Audience ko entertain karna, consistency aur
+                sabar. Yahi aapki asli qualification hai, baaki sab hum sambhalte hain.
               </p>
             </Reveal>
 
@@ -286,7 +325,7 @@ export default function HomePage() {
                         Niqab, hijab ya mask? Bilkul allowed.
                       </p>
                       <p className="mt-1 text-[0.72rem] leading-relaxed text-ink-muted sm:text-xs">
-                        Couple ya lesbian creators bhi welcome — dono ki age 18+ aur ID zaroori.
+                        Couple aur lesbian creators bhi welcome hain. Dono ki age 18+ aur ID zaroori.
                       </p>
                     </div>
                     <span className="flex shrink-0 items-center gap-2 font-label text-[0.52rem] font-semibold uppercase tracking-[0.14em] text-maroon">
@@ -302,6 +341,33 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* MANIFESTO */}
+        <section className="manifesto relative">
+          <div className="grid-lines absolute inset-0 opacity-30" aria-hidden="true" />
+          <div className="container-x relative py-14 sm:py-20">
+            <div className="grid gap-7 lg:grid-cols-[auto_1fr] lg:items-start lg:gap-14">
+              <Reveal>
+                <span className="inline-flex items-center gap-2 border border-gold/40 bg-gold/[0.08] px-4 py-2 font-label text-[0.55rem] font-semibold uppercase tracking-[0.2em] text-gold-bright">
+                  <Sparkles className="h-3 w-3" />
+                  Independent bano
+                </span>
+              </Reveal>
+
+              <Reveal delay={110}>
+                <p className="manifesto-text max-w-4xl text-ivory">
+                  Azadi ka pehla kadam apni kamai hai. Success hote hi log aapki value samajhte hain.{" "}
+                  <span className="display-italic text-gold-bright">Kisi par depend nahi</span>, relationship
+                  par bhi nahi. Apne pairon par khari ho jaiye, khaas taur par divorced aur single girls ke
+                  liye.
+                </p>
+                <p className="mt-6 font-label text-[0.55rem] font-semibold uppercase tracking-[0.18em] text-ivory/45">
+                  Apni mehnat · Apni kamai · Apni pehchaan
+                </p>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
         {/* VIDEOS */}
         <section id="videos" className="section-charcoal section-pad relative overflow-hidden">
           <div className="glow-gold pointer-events-none absolute -right-40 top-0 h-96 w-96 opacity-20" aria-hidden="true" />
@@ -310,7 +376,7 @@ export default function HomePage() {
               <p className="eyebrow eyebrow-center text-gold">Video</p>
               <h2 className="display-2 mt-5 text-ivory">Dekho, kaam kaisa hai.</h2>
               <p className="mt-4 text-[1.02rem] leading-relaxed text-ivory/60">
-                Do chhoti videos — setup aur kamai ka pura process, bina lambe lecture ke.
+                Setup aur kamai ka pura process, do chhoti videos me. Bina lambe lecture ke.
               </p>
             </Reveal>
 
@@ -380,7 +446,7 @@ export default function HomePage() {
               <p className="eyebrow eyebrow-center">Sirf 3 step</p>
               <h2 className="display-2 mt-5 text-maroon-deep">Shuru karna itna easy hai.</h2>
               <p className="lead mt-4">
-                Koi interview nahi. Koi form ka jhanjhat nahi. Bas WhatsApp par ek message — baaki hum guide karenge.
+                Koi interview nahi, koi form nahi. Bas WhatsApp par ek message. Baaki hum guide karenge.
               </p>
             </Reveal>
 
@@ -474,7 +540,7 @@ export default function HomePage() {
                   <div className="image-zoom relative aspect-[16/9] overflow-hidden bg-maroon-deep">
                     <Image
                       src={site.images.funClub}
-                      alt="Stripchat official fun club visual — your prices, your rules"
+                      alt="Stripchat official fun club visual, your prices your rules"
                       fill
                       sizes="(max-width: 1024px) 90vw, 520px"
                       className="object-cover"
@@ -491,7 +557,7 @@ export default function HomePage() {
                 <p className="eyebrow text-gold-bright">Privacy &amp; safety</p>
                 <h2 className="display-2 mt-5 text-ivory">Aapki pehchaan, aapke control mein.</h2>
                 <p className="mt-4 text-[1.02rem] leading-relaxed text-ivory/65">
-                  Face chhupana ho ya poora private rehna — settings aapke haath mein hain. Aapki real details public
+                  Face chhupana ho ya poora private rehna, settings aapke haath mein hain. Aapki real details public
                   nahi hoti.
                 </p>
 
@@ -526,6 +592,189 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* SCAMS & BLACKMAIL */}
+        <section id="scams" className="section-alert section-pad relative overflow-hidden">
+          <div className="glow-alert pointer-events-none absolute -left-40 top-10 h-[30rem] w-[30rem]" aria-hidden="true" />
+          <div className="grid-lines absolute inset-0 opacity-25" aria-hidden="true" />
+
+          <div className="container-x relative">
+            <Reveal className="mx-auto max-w-2xl text-center">
+              <p className="eyebrow eyebrow-center text-gold">Scam alert</p>
+              <h2 className="display-2 mt-5 text-ivory">
+                Common scams <span className="display-italic">aur blackmail</span> tactics.
+              </h2>
+              <p className="mt-4 text-[1.02rem] leading-relaxed text-ivory/60">
+                Bahut se fake agents lalach dekar join karwate hain, phir chhupakar kaat dete hain.
+                Ye 6 tricks pehchan lo.
+              </p>
+            </Reveal>
+
+            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {scams.map((scam, index) => {
+                const Icon = scamIcons[scam.icon as keyof typeof scamIcons]
+                return (
+                  <Reveal key={scam.title} delay={index * 70} className="h-full">
+                    <div className="scam-card h-full p-6 sm:p-7">
+                      <div className="flex items-start justify-between gap-3">
+                        <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-[rgba(214,96,92,0.5)] bg-[rgba(159,16,20,0.25)] text-[#f1b9b6]">
+                          <Icon className="h-5 w-5" />
+                        </span>
+                        <span className="alert-chip">{scam.tag}</span>
+                      </div>
+                      <h3 className="mt-5 font-display text-[1.2rem] leading-snug text-ivory">
+                        {scam.title}
+                      </h3>
+                      <p className="mt-2.5 text-sm leading-relaxed text-ivory/60">{scam.body}</p>
+                    </div>
+                  </Reveal>
+                )
+              })}
+            </div>
+
+            <Reveal delay={160}>
+              <div className="mt-10 flex flex-col items-start gap-4 border border-[rgba(214,96,92,0.35)] bg-[rgba(159,16,20,0.18)] p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+                <div className="flex items-start gap-3">
+                  <ShieldAlert className="mt-0.5 h-5 w-5 shrink-0 text-[#f1b9b6]" />
+                  <p className="text-sm leading-relaxed text-ivory/75">
+                    Kisi ne joining ya KYC ke naam par paisa maanga?{" "}
+                    <span className="text-ivory">Band karo aur turant humein batao.</span>
+                  </p>
+                </div>
+                <a
+                  href={waLink("Hi! Koi agent mujhse paise maang raha hai. Please verify karo.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-base btn-wa btn-wrap shrink-0 px-5 py-3.5 text-[0.6rem]"
+                >
+                  <WhatsAppIcon className="h-3.5 w-3.5" />
+                  Verify karao
+                  <ArrowUpRight className="h-3.5 w-3.5" />
+                </a>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* LEGAL RULES */}
+        <section id="legal" className="section-ivory section-pad paper-texture relative overflow-hidden">
+          <div className="container-x">
+            <Reveal className="mx-auto max-w-2xl text-center">
+              <p className="eyebrow eyebrow-center">Legal India</p>
+              <h2 className="display-2 mt-5 text-maroon-deep">
+                Legal rules &amp; guidelines <span className="display-italic">har model ke liye.</span>
+              </h2>
+              <p className="lead mt-4">
+                Live streaming tab tak legal hai, jab 18+, consent aur platform rules ka paalan ho.
+                Ye 6 baatein hamesha yaad rakho.
+              </p>
+            </Reveal>
+
+            <div className="mt-14 grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-14">
+              <Reveal>
+                <div className="lg:sticky lg:top-28">
+                  <span className="grid h-14 w-14 place-items-center rounded-full border border-gold/50 bg-white text-maroon">
+                    <Scale className="h-6 w-6" />
+                  </span>
+                  <p className="mt-6 font-display text-[2.6rem] leading-none text-maroon-deep">18+</p>
+                  <p className="mt-2 font-label text-[0.58rem] font-semibold uppercase tracking-[0.2em] text-ink-muted">
+                    Strictly adults only
+                  </p>
+                  <p className="mt-5 text-sm leading-relaxed text-ink-muted">
+                    Age, consent aur rules. Teeno follow honge, tabhi account long term chalega. Yehi ek
+                    verified agency ka kaam hai.
+                  </p>
+                  <p className="mt-6 border-t border-rule pt-5 text-[0.72rem] leading-relaxed text-ink-muted">
+                    Disclaimer: ye general guidance hai, legal advice nahi. Doubt ho toh kisi
+                    advocate se baat karo.
+                  </p>
+                </div>
+              </Reveal>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                {legalRules.map((rule, index) => (
+                  <Reveal key={rule.title} delay={index * 70} className="h-full">
+                    <div className="legal-card h-full p-6">
+                      <span className="font-display text-[1.7rem] leading-none text-gold/70">
+                        0{index + 1}
+                      </span>
+                      <h3 className="mt-3 font-display text-[1.12rem] leading-snug text-maroon-deep">
+                        {rule.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-relaxed text-ink-muted">{rule.body}</p>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* WHY AN AUTHORIZED AGENCY */}
+        <section id="authorized" className="section-maroon section-pad relative overflow-hidden">
+          <div className="glow-gold pointer-events-none absolute -right-32 top-0 h-[26rem] w-[26rem] opacity-40" aria-hidden="true" />
+          <div className="grid-lines absolute inset-0 opacity-30" aria-hidden="true" />
+
+          <div className="container-x relative">
+            <Reveal className="mx-auto max-w-2xl text-center">
+              <p className="eyebrow eyebrow-center text-gold-bright">Authorized agency</p>
+              <h2 className="display-2 mt-5 text-ivory">
+                Safety, privacy aur legal earnings <span className="display-italic">ek hi jagah.</span>
+              </h2>
+              <p className="mt-4 text-[1.02rem] leading-relaxed text-ivory/65">
+                Random agent aur verified agency ka farq yahi hai. Likha hua rule, secure account aur time
+                par paisa, bina kisi pressure ke.
+              </p>
+            </Reveal>
+
+            <div className="mt-12 grid gap-5 md:grid-cols-3">
+              {authorizedPillars.map((pillar, index) => {
+                const Icon = pillarIcons[pillar.icon as keyof typeof pillarIcons]
+                return (
+                  <Reveal key={pillar.label} delay={index * 90} className="h-full">
+                    <div className="pillar-card h-full p-7">
+                      <span className="pillar-icon grid h-12 w-12 place-items-center rounded-full border border-gold/50 bg-gold/10 text-gold-bright">
+                        <Icon className="h-5 w-5" />
+                      </span>
+                      <p className="mt-5 font-label text-[0.55rem] font-semibold uppercase tracking-[0.2em] text-gold-bright">
+                        {pillar.label}
+                      </p>
+                      <h3 className="display-3 mt-2 text-ivory">{pillar.title}</h3>
+                      <ul className="mt-5 space-y-3">
+                        {pillar.points.map((point) => (
+                          <li key={point} className="flex items-start gap-2.5 text-sm leading-relaxed text-ivory/70">
+                            <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full border border-gold/40 text-gold-bright">
+                              <Check className="h-3 w-3" />
+                            </span>
+                            {point}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </Reveal>
+                )
+              })}
+            </div>
+
+            <Reveal delay={200}>
+              <div className="mt-10 flex flex-col items-center gap-4 text-center">
+                <a
+                  href={waLink("Hi! Mujhe authorized agency ke saath join karna hai. Details bhejo.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-base btn-wa px-5 py-4 text-[0.62rem] sm:px-7 sm:text-[0.68rem]"
+                >
+                  <WhatsAppIcon className="h-4 w-4" />
+                  Authorized agency ke saath join karo
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+                <p className="font-label text-[0.56rem] font-semibold uppercase tracking-[0.14em] text-ivory/45">
+                  Free joining · Weekly payment · Written rules
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
         {/* SWITCH */}
         <section className="section-lift section-pad relative overflow-hidden">
           <div className="container-x">
@@ -534,7 +783,7 @@ export default function HomePage() {
                 <p className="eyebrow">Agency switch</p>
                 <h2 className="display-2 mt-5 text-maroon-deep">Dusri agency ya app se pareshan ho?</h2>
                 <p className="lead mt-4">
-                  Agar neeche wali koi bhi problem hai, humse baat karo. Switch karna easy hai — purana account safe,
+                  Agar neeche wali koi bhi problem hai, humse baat karo. Switch karna easy hai. Purana account safe,
                   naya account strong.
                 </p>
 
@@ -567,17 +816,17 @@ export default function HomePage() {
                     Switch offer
                   </span>
                   <p className="mt-6 font-display text-[2.6rem] leading-[1.02] text-ivory sm:text-[3.1rem]">
-                    3x income
-                    <span className="display-italic block">ka mauka*</span>
+                    Sahi rate,
+                    <span className="display-italic block">saaf payment.</span>
                   </p>
                   <p className="mt-4 text-sm leading-relaxed text-ivory/65">
                     Chamet, Hiyaa, Zeep Live ya kisi bhi app se aa rahi hain? Hum aapko Stripchat par properly shift
-                    karte hain — sahi token rate, safe account aur weekly payment ke saath.
+                    karte hain. Sahi token rate, safe account aur weekly payment ke saath.
                   </p>
 
                   <ul className="mt-6 space-y-3">
                     {[
-                      "Sahi token rate — kam cut nahi",
+                      "Sahi token rate, kam cut nahi",
                       "Account rules ke saath, block ka risk kam",
                       "Weekly payment, seedha bank mein",
                       "Hindi mein proper guidance",
@@ -592,8 +841,8 @@ export default function HomePage() {
                   </ul>
 
                   <p className="mt-6 border-t border-gold/20 pt-4 text-[0.64rem] leading-relaxed text-ivory/35">
-                    *3x ka matlab aapki purani income se zyada potential. Result aapke time, audience aur consistency
-                    par depend karta hai. Guarantee nahi.
+                    *Result aapke time, audience aur consistency par depend karta hai. Koi income guarantee
+                    nahi hai.
                   </p>
 
                   <a
@@ -613,7 +862,7 @@ export default function HomePage() {
         </section>
 
         {/* DIFFERENCE / WHY US */}
-        <section className="section-charcoal section-pad relative overflow-hidden">
+        <section id="about" className="section-charcoal section-pad relative overflow-hidden">
           <div className="glow-gold pointer-events-none absolute -right-40 top-0 h-[28rem] w-[28rem] opacity-20" aria-hidden="true" />
           <div className="container-x relative">
             <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-16">
@@ -622,7 +871,7 @@ export default function HomePage() {
                   <div className="image-zoom relative aspect-[4/3] overflow-hidden bg-charcoal">
                     <Image
                       src={site.images.awards}
-                      alt="Official Stripchat creator awards — 100K to 2M followers"
+                      alt="Official Stripchat creator awards, 100K to 2M followers"
                       fill
                       sizes="(max-width: 1024px) 90vw, 520px"
                       className="object-cover"
@@ -639,11 +888,24 @@ export default function HomePage() {
               </Reveal>
 
               <Reveal delay={100}>
-                <p className="eyebrow text-gold">Kyun hum</p>
-                <h2 className="display-2 mt-5 text-ivory">Agency aisi, jispe bharosa kar sako.</h2>
+                <p className="eyebrow text-gold">About the agency</p>
+                <h2 className="display-2 mt-5 text-ivory">Stripchat ki verified agency.</h2>
                 <p className="mt-4 text-[1.02rem] leading-relaxed text-ivory/60">
-                  Verified, transparent aur creator-first. Koi hidden charge nahi, koi pressure nahi.
+                  Stripchat ke official rules par chalne wali independent agency. Written agreement,
+                  transparent payout aur creator-first support, bina kisi hidden charge ke.
                 </p>
+
+                <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2.5">
+                  {credentials.map((item) => (
+                    <span
+                      key={item}
+                      className="inline-flex items-center gap-1.5 font-label text-[0.56rem] font-semibold uppercase tracking-[0.14em] text-gold-bright"
+                    >
+                      <BadgeCheck className="h-3.5 w-3.5" />
+                      {item}
+                    </span>
+                  ))}
+                </div>
 
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
                   {whyUs.map((item, index) => {
@@ -703,6 +965,27 @@ export default function HomePage() {
                         </li>
                       ))}
                     </ul>
+
+                    <div className="mt-6 border-t border-ivory/15 pt-5">
+                      <p className="deep-head text-[#d98a86]">Ye 4 scams sabse khatarnak</p>
+                      <ul className="mt-4 space-y-4">
+                        {comparison.old.deep.map((item) => (
+                          <li key={item.title} className="flex items-start gap-3">
+                            <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full border border-[rgba(214,96,92,0.5)] text-[#d98a86]">
+                              <X className="h-3 w-3" />
+                            </span>
+                            <div>
+                              <p className="font-display text-[1rem] leading-snug text-ivory/85">
+                                {item.title}
+                              </p>
+                              <p className="mt-1 text-[0.79rem] leading-relaxed text-ivory/45">
+                                {item.body}
+                              </p>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </Reveal>
 
@@ -724,6 +1007,27 @@ export default function HomePage() {
                         </li>
                       ))}
                     </ul>
+
+                    <div className="mt-6 border-t border-gold/20 pt-5">
+                      <p className="deep-head text-gold-bright">Ye 4 guarantee hum dete hain</p>
+                      <ul className="mt-4 space-y-4">
+                        {comparison.us.deep.map((item) => (
+                          <li key={item.title} className="flex items-start gap-3">
+                            <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full border border-gold/40 text-gold-bright">
+                              <Check className="h-3 w-3" />
+                            </span>
+                            <div>
+                              <p className="font-display text-[1rem] leading-snug text-ivory">
+                                {item.title}
+                              </p>
+                              <p className="mt-1 text-[0.79rem] leading-relaxed text-ivory/55">
+                                {item.body}
+                              </p>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </Reveal>
 
@@ -747,7 +1051,7 @@ export default function HomePage() {
                       <div className="relative aspect-[4/3]">
                         <Image
                           src={item.src}
-                          alt={`Stripchat creator milestone — ${item.label}`}
+                          alt={`Stripchat creator milestone, ${item.label}`}
                           fill
                           sizes="(max-width: 1024px) 45vw, 280px"
                           className="object-cover"
@@ -771,35 +1075,73 @@ export default function HomePage() {
         </section>
 
         {/* PLATFORM */}
-        <section className="section-deep relative overflow-hidden py-14 sm:py-16">
-          <div className="container-x">
-            <div className="grid items-center gap-8 lg:grid-cols-[1fr_auto] lg:gap-14">
+        <section className="platform-section relative py-16 sm:py-20 lg:py-24">
+          <div className="platform-word" aria-hidden="true">
+            STRIPCHAT
+          </div>
+          <div className="grid-lines absolute inset-0 opacity-30" aria-hidden="true" />
+          <div className="glow-gold pointer-events-none absolute -left-32 top-1/3 h-[24rem] w-[24rem] opacity-50" aria-hidden="true" />
+
+          <div className="container-x relative">
+            <div className="max-w-3xl">
               <Reveal>
-                <p className="eyebrow text-gold">Platform</p>
-                <h2 className="display-3 mt-3 text-ivory">Duniya ka #1 adult live platform.</h2>
-                <p className="mt-3 max-w-xl text-sm leading-relaxed text-ivory/60">
-                  Stripchat 10+ saal se live hai, 500M+ monthly visitors ke saath. Matlab aapke paas global audience
-                  ka access hai — ghar baithe.
+                <p className="eyebrow text-gold">International platform</p>
+                <h2 className="display-2 mt-5 text-shine">Adult international live streaming platform.</h2>
+                <p className="mt-6 text-[1.05rem] leading-relaxed text-ivory/75 sm:text-[1.12rem]">
+                  <span className="font-display italic text-gold-bright">
+                    Looking to boost your earnings from live broadcasting or video chatting apps?
+                  </span>{" "}
+                  Say no more! Join Stripchat, ek international cam platform jahan duniya bhar ki
+                  audience aapke liye live hai.
+                </p>
+                <p className="mt-4 max-w-xl text-sm leading-relaxed text-ivory/55">
+                  10+ saal se live aur 500M+ monthly visitors. Global audience ka direct access, ghar
+                  baithe.
                 </p>
               </Reveal>
 
-              <Reveal delay={100}>
-                <div className="grid grid-cols-3 gap-6 border-t border-gold/20 pt-6 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
-                  {[
-                    { value: "10+", label: "Years live" },
-                    { value: "500M+", label: "Monthly visitors" },
-                    { value: "#1", label: "Adult live platform" },
-                  ].map((stat) => (
-                    <div key={stat.label}>
-                      <p className="font-display text-[1.7rem] leading-none text-gold-bright">{stat.value}</p>
-                      <p className="mt-2 font-label text-[0.5rem] font-semibold uppercase tracking-[0.14em] text-ivory/40">
-                        {stat.label}
-                      </p>
-                    </div>
-                  ))}
+              <Reveal delay={120}>
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <a
+                    href={waLink("Hi! Mujhe international platform Stripchat par join karna hai.")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-base btn-wa px-5 py-4 text-[0.62rem] sm:px-7 sm:text-[0.68rem]"
+                  >
+                    <WhatsAppIcon className="h-4 w-4" />
+                    Abhi join karo
+                    <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                  <Link href="/apply" className="btn-base btn-ghost px-6 py-4 text-[0.66rem]">
+                    Apply form bharo
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
                 </div>
               </Reveal>
             </div>
+
+            <Reveal delay={180}>
+              <div className="mt-12 grid grid-cols-3 gap-2.5 sm:gap-4">
+                {[
+                  { value: "10+", label: "Years live" },
+                  { value: "500M+", label: "Monthly visitors" },
+                  { value: "Global", label: "Audience, 24×7" },
+                ].map((stat) => (
+                  <div key={stat.label} className="stat-glass p-3.5 sm:p-6">
+                    <p className="font-display text-[1.35rem] leading-none text-gold-bright sm:text-[2.3rem]">
+                      {stat.value}
+                    </p>
+                    <p className="mt-2.5 font-label text-[0.52rem] font-semibold uppercase tracking-[0.14em] text-ivory/45 sm:text-[0.52rem] sm:tracking-[0.16em]">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+
+            <p className="mt-7 font-label text-[0.5rem] font-semibold uppercase tracking-[0.18em] text-ivory/30">
+              Stripchat · 18+ only · Verified creators · Free registration
+            </p>
           </div>
         </section>
 
@@ -859,13 +1201,13 @@ export default function HomePage() {
                   <span className="display-italic">Phir WhatsApp.</span>
                 </h2>
                 <p className="mt-4 max-w-lg text-[1.02rem] leading-relaxed text-ivory/60">
-                  Naam aur city bharo. Hum WhatsApp par baat karke pura process samjhayenge — account, training,
-                  privacy aur payment. Koi paisa nahi lagega.
+                  Naam aur city bharo. Hum poori process samjhayenge, account se payment tak. Koi paisa
+                  nahi lagega.
                 </p>
 
                 <ul className="mt-7 grid gap-3 sm:grid-cols-2">
                   {[
-                    "Koi joining fee nahi — ₹0",
+                    "Koi joining fee nahi",
                     "Account aur training free",
                     "Face cover / mask allowed",
                     "Payment weekly, bank mein",
@@ -895,7 +1237,7 @@ export default function HomePage() {
                     </p>
                     <a
                       href={`tel:${site.phoneRaw}`}
-                      className="mt-2 inline-flex items-center gap-1.5 font-label text-[0.56rem] font-semibold uppercase tracking-[0.14em] text-ivory/50 transition-colors hover:text-gold-bright"
+                      className="mt-2 inline-flex min-h-[40px] items-center gap-1.5 font-label text-[0.56rem] font-semibold uppercase tracking-[0.14em] text-ivory/50 transition-colors hover:text-gold-bright"
                     >
                       <Phone className="h-3 w-3" />
                       {site.phoneDisplay}

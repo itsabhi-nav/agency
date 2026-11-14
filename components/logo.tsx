@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { BadgeCheck } from "lucide-react"
 
 type LogoProps = {
   href?: string
@@ -18,15 +19,21 @@ export default function Logo({ href = "/", compact = false, className = "", tone
       </span>
       {!compact && (
         <span className="flex flex-col leading-none">
-          <span
-            className={`font-display text-[1rem] font-semibold tracking-[0.1em] sm:text-[1.15rem] sm:tracking-[0.14em] ${
-              dark ? "text-ivory" : "text-maroon"
-            }`}
-          >
-            STRIPCHAT
+          <span className="flex items-center gap-1.5">
+            <span
+              className={`font-display text-[1rem] font-semibold tracking-[0.1em] sm:text-[1.15rem] sm:tracking-[0.14em] ${
+                dark ? "text-ivory" : "text-maroon"
+              }`}
+            >
+              STRIPCHAT
+            </span>
+            <BadgeCheck
+              aria-hidden="true"
+              className={`h-3.5 w-3.5 sm:h-4 sm:w-4 ${dark ? "text-gold-bright" : "text-gold-ink"}`}
+            />
           </span>
           <span
-            className={`mt-1 font-label text-[0.46rem] font-semibold tracking-[0.26em] sm:text-[0.52rem] sm:tracking-[0.34em] ${
+            className={`logo-sub mt-1 font-label text-[0.46rem] font-semibold tracking-[0.26em] sm:text-[0.52rem] sm:tracking-[0.34em] ${
               dark ? "text-gold-bright/80" : "text-gold-ink"
             }`}
           >
@@ -40,7 +47,7 @@ export default function Logo({ href = "/", compact = false, className = "", tone
   if (!href) return content
 
   return (
-    <Link href={href} aria-label="Stripchat India Agency — home" className="inline-flex">
+    <Link href={href} aria-label="Stripchat India Agency, home" className="inline-flex">
       {content}
     </Link>
   )

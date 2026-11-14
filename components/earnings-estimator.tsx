@@ -99,7 +99,7 @@ export default function EarningsEstimator() {
 
           <p className="mt-6 flex items-start gap-2 text-[0.68rem] leading-relaxed text-ink-muted">
             <Sparkles className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-ink" />
-            Koi target nahi. Jitna time doge, utna zyada potential — apne comfort se decide karo.
+            Koi target nahi. Jitna time doge, utna zyada potential. Apne comfort se decide karo.
           </p>
         </div>
 
@@ -152,7 +152,7 @@ export default function EarningsEstimator() {
               <ArrowUpRight className="h-4 w-4" />
             </a>
             <p className="mt-3 text-center text-[0.6rem] leading-relaxed text-ivory/35">
-              *Indicative hai — actual income time, consistency aur audience par depend karti hai.
+              *Indicative hai. Actual income time, consistency aur audience par depend karti hai.
             </p>
           </div>
         </div>

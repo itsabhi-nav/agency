@@ -540,7 +540,7 @@ select.field-input {
 .range-luxe {
   -webkit-appearance: none;
   appearance: none;
-  height: 24px;
+  height: 34px;
   background: transparent;
   cursor: pointer;
 }
@@ -846,6 +846,226 @@ select.field-input {
   background-size: 0% 1px;
 }
 
+/* ---------- Awareness sections ---------- */
+
+.section-alert {
+  background:
+    radial-gradient(circle at 84% 10%, rgba(159, 16, 20, 0.34), transparent 54%),
+    radial-gradient(circle at 6% 92%, rgba(110, 27, 39, 0.55), transparent 58%),
+    var(--charcoal);
+  color: #ece5d9;
+}
+
+.glow-alert {
+  background: radial-gradient(circle, rgba(201, 70, 66, 0.3) 0%, rgba(159, 16, 20, 0.12) 45%, transparent 72%);
+}
+
+.alert-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid rgba(214, 96, 92, 0.45);
+  background: rgba(159, 16, 20, 0.22);
+  color: #f1b9b6;
+  padding: 0.3rem 0.6rem;
+  font-family: var(--font-label);
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.scam-card {
+  position: relative;
+  background: rgba(244, 238, 227, 0.045);
+  border: 1px solid rgba(244, 238, 227, 0.13);
+  transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scam-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(201, 70, 66, 0.95), rgba(201, 70, 66, 0));
+}
+
+.scam-card:hover {
+  border-color: rgba(220, 192, 138, 0.45);
+  background: rgba(244, 238, 227, 0.075);
+  transform: translateY(-3px);
+}
+
+.legal-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--rule);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.legal-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--maroon), rgba(110, 27, 39, 0));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.legal-card:hover {
+  border-color: var(--rule-gold);
+  box-shadow: 0 26px 60px -46px rgba(43, 42, 40, 0.55);
+  transform: translateY(-3px);
+}
+
+.legal-card:hover::before {
+  opacity: 1;
+}
+
+.pillar-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(244, 238, 227, 0.075), rgba(244, 238, 227, 0.025));
+  border: 1px solid rgba(196, 162, 106, 0.32);
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pillar-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.pillar-card:hover {
+  border-color: rgba(220, 192, 138, 0.7);
+  transform: translateY(-4px);
+  box-shadow: 0 40px 80px -60px rgba(0, 0, 0, 0.9);
+}
+
+.pillar-card:hover .pillar-icon {
+  background: var(--gold);
+  color: var(--maroon-deep);
+}
+
+.pillar-icon {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ---------- Manifesto band ---------- */
+
+.manifesto {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(196, 162, 106, 0.16), transparent 45%),
+    linear-gradient(120deg, var(--maroon-deep) 0%, var(--maroon) 58%, var(--maroon-deep) 100%);
+  color: var(--ivory);
+}
+
+.manifesto-text {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(1.35rem, 2.9vw, 2.2rem);
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Platform ---------- */
+
+.platform-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 120%, rgba(196, 162, 106, 0.22), transparent 60%),
+    radial-gradient(circle at 82% -10%, rgba(196, 162, 106, 0.12), transparent 55%),
+    var(--maroon-deep);
+  color: var(--ivory);
+}
+
+.platform-word {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(5.5rem, 21vw, 17rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: rgba(244, 238, 227, 0.045);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.text-shine {
+  background: linear-gradient(
+    100deg,
+    var(--gold) 0%,
+    #f8e9cb 22%,
+    var(--gold-bright) 38%,
+    var(--gold) 58%,
+    #f8e9cb 78%,
+    var(--gold) 100%
+  );
+  background-size: 240% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shine-sweep 7s linear infinite;
+}
+
+@keyframes shine-sweep {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -40% 0;
+  }
+}
+
+.stat-glass {
+  position: relative;
+  border: 1px solid rgba(196, 162, 106, 0.3);
+  background: rgba(244, 238, 227, 0.04);
+  backdrop-filter: blur(6px);
+  transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.stat-glass:hover {
+  border-color: rgba(220, 192, 138, 0.7);
+  background: rgba(244, 238, 227, 0.08);
+  transform: translateY(-3px);
+}
+
+/* ---------- Comparison deep points ---------- */
+
+.deep-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-label);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.deep-head::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.28;
+}
+
 /* ---------- Misc ---------- */
 
 .hide-scrollbar {
@@ -880,6 +1100,61 @@ section[id] {
 }
 }
 
+/* Top strip: all three trust items must fit on small phones. */
+.top-strip {
+  font-size: 0.58rem;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 374px) {
+  .top-strip {
+    font-size: 0.52rem;
+    letter-spacing: 0.03em;
+  }
+}
+
+@media (min-width: 640px) {
+  .top-strip {
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+  }
+}
+
+/* Mobile readability floor: 7-9px labels are unreadable on phones.
+   Unlayered on purpose so it beats Tailwind's @layer utilities. */
+@media (max-width: 639px) {
+  .text-\[0\.4rem\],
+  .text-\[0\.44rem\],
+  .text-\[0\.46rem\],
+  .text-\[0\.48rem\],
+  .text-\[0\.5rem\],
+  .text-\[0\.52rem\],
+  .text-\[0\.54rem\],
+  .text-\[0\.55rem\],
+  .text-\[0\.56rem\],
+  .text-\[0\.58rem\],
+  .text-\[0\.6rem\],
+  .text-\[0\.62rem\] {
+    font-size: 0.64rem;
+  }
+
+  /* Wordmark stays a touch smaller so the logo line never wraps. */
+  .logo-sub {
+    font-size: 0.58rem;
+  }
+
+  .alert-chip,
+  .deep-head {
+    font-size: 0.64rem;
+  }
+
+  /* Long uppercase CTAs must wrap instead of overflowing small phones. */
+  .btn-base {
+    white-space: normal;
+    text-align: center;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -891,7 +1166,8 @@ section[id] {
   }
   .marquee-track,
   .pulse-dot::after,
-  .pop-in {
+  .pop-in,
+  .text-shine {
     animation: none;
   }
   * {
