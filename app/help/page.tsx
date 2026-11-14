@@ -1,4 +1,3 @@
-import type { Metadata } from "next"
 import Link from "next/link"
 import {
   AlertCircle,
@@ -16,27 +15,22 @@ import SiteFooter from "@/components/site-footer"
 import WhatsAppFloat from "@/components/whatsapp-float"
 import Reveal from "@/components/reveal"
 import FaqAccordion from "@/components/faq-accordion"
+import Breadcrumbs from "@/components/breadcrumbs"
+import PageStructuredData from "@/components/page-structured-data"
 import { faqs, privacyPoints, site, switchPoints, waLink } from "@/lib/site"
+import { publicSeoPages } from "@/lib/seo/config"
+import { createPageMetadata } from "@/lib/seo/metadata"
 
-export const metadata: Metadata = {
-  title: "Madad · Help & safety",
-  description:
-    "Stripchat India Agency se baat karo. WhatsApp, call ya email. Privacy, safety, payment aur agency switch se judi madad. 18+ only.",
-  alternates: {
-    canonical: "/help",
-  },
-  openGraph: {
-    title: "Madad · Help & safety · Stripchat India Agency",
-    description:
-      "WhatsApp, call ya email. Privacy, safety, payment aur agency switch se judi madad.",
-    url: "https://stripchatagency.in/help",
-    images: ["/images/brand/hero-heart.jpg"],
-  },
-}
+export const metadata = createPageMetadata(publicSeoPages.help)
 
 export default function HelpPage() {
   return (
     <div className="min-h-screen bg-ivory">
+      <PageStructuredData
+        name={publicSeoPages.help.title}
+        description={publicSeoPages.help.description}
+        path={publicSeoPages.help.path}
+      />
       <SiteHeader />
 
       <main id="main">
@@ -47,6 +41,7 @@ export default function HelpPage() {
           <div className="glow-gold pointer-events-none absolute -right-40 bottom-0 h-[26rem] w-[26rem] opacity-30" aria-hidden="true" />
 
           <div className="container-x relative pb-16 pt-12 sm:pt-16 lg:pb-24">
+            <Breadcrumbs name={publicSeoPages.help.title} path={publicSeoPages.help.path} />
             <Reveal className="max-w-2xl">
               <div className="inline-flex items-center gap-2.5 border border-gold/35 bg-gold/[0.07] px-4 py-2">
                 <span className="pulse-dot relative h-1.5 w-1.5 rounded-full bg-gold text-gold" />

@@ -1,32 +1,25 @@
-import type { Metadata } from "next"
 import Image from "next/image"
-import Link from "next/link"
-import { ArrowLeft, ArrowUpRight, Check, Lock, MessageCircle, ShieldCheck } from "lucide-react"
+import { ArrowUpRight, Check, Lock, MessageCircle, ShieldCheck } from "lucide-react"
 import SiteHeader from "@/components/site-header"
 import SiteFooter from "@/components/site-footer"
 import WhatsAppFloat from "@/components/whatsapp-float"
 import ApplyForm from "@/components/apply-form"
+import Breadcrumbs from "@/components/breadcrumbs"
+import PageStructuredData from "@/components/page-structured-data"
 import { site, steps, waLink } from "@/lib/site"
+import { publicSeoPages } from "@/lib/seo/config"
+import { createPageMetadata } from "@/lib/seo/metadata"
 
-export const metadata: Metadata = {
-  title: "Apply · 30 second",
-  description:
-    "Stripchat India Agency ke saath free registration. Bas naam aur city bharo, WhatsApp par baat karke aage badhein. 18+ only, koi joining fee nahi.",
-  alternates: {
-    canonical: "/apply",
-  },
-  openGraph: {
-    title: "Apply · Stripchat India Agency",
-    description:
-      "Free registration. Bas naam aur city bharo aur WhatsApp par aage badhein. 18+ only, koi joining fee nahi.",
-    url: "https://stripchatagency.in/apply",
-    images: ["/images/brand/hero-heart.jpg"],
-  },
-}
+export const metadata = createPageMetadata(publicSeoPages.apply)
 
 export default function ApplyPage() {
   return (
     <div className="min-h-screen bg-ivory">
+      <PageStructuredData
+        name={publicSeoPages.apply.title}
+        description={publicSeoPages.apply.description}
+        path={publicSeoPages.apply.path}
+      />
       <SiteHeader />
 
       <main id="main" className="relative overflow-hidden">
@@ -36,13 +29,7 @@ export default function ApplyPage() {
           <div className="glow-gold pointer-events-none absolute -right-40 bottom-0 h-[26rem] w-[26rem] opacity-30" aria-hidden="true" />
 
           <div className="container-x relative pb-16 pt-10 sm:pt-14 lg:pb-24 lg:pt-16">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 font-label text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-ivory/45 transition-colors hover:text-gold-bright"
-            >
-              <ArrowLeft className="h-3.5 w-3.5" />
-              Home
-            </Link>
+            <Breadcrumbs name={publicSeoPages.apply.title} path={publicSeoPages.apply.path} />
 
             <div className="mt-8 grid items-start gap-12 lg:grid-cols-[1fr_0.95fr] lg:gap-16">
               <div className="min-w-0 lg:pt-4">

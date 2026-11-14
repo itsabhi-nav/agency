@@ -1,13 +1,5 @@
-import type { MetadataRoute } from "next"
+import { createCrawlerPolicy } from "@/lib/seo/crawler-policy"
 
-export default function robots(): MetadataRoute.Robots {
-  return {
-    rules: [
-      {
-        userAgent: "*",
-        allow: "/",
-      },
-    ],
-    sitemap: "https://stripchatagency.in/sitemap.xml",
-  }
+export default function robots() {
+  return createCrawlerPolicy()
 }

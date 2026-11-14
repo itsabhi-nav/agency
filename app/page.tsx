@@ -29,6 +29,7 @@ import {
 import SiteHeader from "@/components/site-header"
 import WhatsAppIcon from "@/components/whatsapp-icon"
 import SiteFooter from "@/components/site-footer"
+import PageStructuredData from "@/components/page-structured-data"
 import WhatsAppFloat from "@/components/whatsapp-float"
 import Reveal from "@/components/reveal"
 import FaqAccordion from "@/components/faq-accordion"
@@ -53,6 +54,7 @@ import {
   waLink,
   whyUs,
 } from "@/lib/site"
+import { publicSeoPages } from "@/lib/seo/config"
 
 const requirementIcons = {
   age: BadgeCheck,
@@ -87,6 +89,11 @@ const privacyIcons = [EyeOff, UserRound, MapPin, Home]
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-ivory">
+      <PageStructuredData
+        name={publicSeoPages.home.title}
+        description={publicSeoPages.home.description}
+        path={publicSeoPages.home.path}
+      />
       <SiteHeader />
 
       <main id="main">
