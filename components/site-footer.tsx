@@ -77,15 +77,17 @@ export default function SiteFooter() {
                     {site.phoneDisplay}
                   </a>
                 </li>
-                <li>
-                  <a
-                    href={`mailto:${site.email}`}
-                    className="flex min-h-[44px] items-center gap-2.5 text-sm text-ivory/70 transition-colors hover:text-gold-bright"
-                  >
-                    <Mail className="h-3.5 w-3.5 text-gold" />
-                    {site.email}
-                  </a>
-                </li>
+                {site.email ? (
+                  <li>
+                    <a
+                      href={`mailto:${site.email}`}
+                      className="flex min-h-[44px] items-center gap-2.5 text-sm text-ivory/70 transition-colors hover:text-gold-bright"
+                    >
+                      <Mail className="h-3.5 w-3.5 text-gold" />
+                      {site.email}
+                    </a>
+                  </li>
+                ) : null}
                 <li className="text-[0.72rem] leading-relaxed text-ivory/45">{site.hours}</li>
               </ul>
             </div>

@@ -59,7 +59,7 @@ export default function HelpPage() {
               </p>
             </Reveal>
 
-            <div className="mt-12 grid gap-4 sm:grid-cols-3">
+            <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {[
                 {
                   icon: WhatsAppIcon,
@@ -75,13 +75,17 @@ export default function HelpPage() {
                   action: "Call karo",
                   href: `tel:${site.phoneRaw}`,
                 },
-                {
-                  icon: Mail,
-                  title: "Email",
-                  body: site.email,
-                  action: "Mail karo",
-                  href: `mailto:${site.email}`,
-                },
+                ...(site.email
+                  ? [
+                      {
+                        icon: Mail,
+                        title: "Email",
+                        body: site.email,
+                        action: "Mail karo",
+                        href: `mailto:${site.email}`,
+                      },
+                    ]
+                  : []),
               ].map((item, index) => (
                 <Reveal key={item.title} delay={index * 70}>
                   <div className="card-dark h-full p-6">

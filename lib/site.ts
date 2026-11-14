@@ -1,10 +1,12 @@
+const configuredContactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim()
+
 export const site = {
   name: "Stripchat India Agency",
   brand: "STRIPCHAT",
   brandSub: "INDIA AGENCY",
   phoneDisplay: "+91 87009 55207",
   phoneRaw: "+918700955207",
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "info@stripchatagency.in",
+  email: configuredContactEmail || undefined,
   whatsapp: "https://wa.me/918700955207",
   applyMessage: "Hi! Mujhe Stripchat par live streaming kaam karna hai. Please guide karo.",
   hours: "Mon–Sun · 9:00 AM – 2:00 AM IST",

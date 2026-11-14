@@ -1,0 +1,15 @@
+cluster,keyword,source_or_status,intent,priority,target_page,notes
+Branded agency,Stripchat agency India,Intent hypothesis; brand/service verified,Commercial / navigational,P1,/,Natural fit for home page; autocomplete returned no suggestion
+Branded agency,Stripchat India agency,Intent hypothesis; brand/service verified,Commercial / navigational,P1,/,Main page title and visible content cover the concept
+Branded signup,Stripchat model registration India,Intent hypothesis; no volume data,Transactional,P1,/apply,Do not imply this is the platform's official registration page
+Branded signup,join Stripchat as a creator in India,Intent hypothesis; no volume data,Transactional,P1,/apply,Use transparent 18+ eligibility and accurate steps
+Branded guidance,how to become a Stripchat model in India,Intent hypothesis; verify platform rules,Informational / commercial,P2,/,Potential future guide only with verified current steps
+Privacy,Stripchat model privacy,Existing page-topic match; volume unknown,Informational,P2,/help,Answer using platform settings and distinguish limits
+Privacy,webcam creator privacy settings,Intent hypothesis; volume unknown,Informational,P2,/help,Do not promise anonymity or guaranteed privacy
+Agency support,change Stripchat agency,Intent hypothesis; existing topic,Commercial / informational,P2,/help,Explain process only after checking platform terms
+Payment,Stripchat agency payment support,Intent hypothesis; existing topic,Commercial,P2,/help,No payment guarantee without evidence
+Broad WFH,work from home jobs for women India,Google Autocomplete observed; no volume,Informational / commercial,P3,,Broad mismatch; do not create generic jobs landing page
+Broad WFH,best work from home jobs for women in India,Google Autocomplete observed; no volume,Informational / commercial,P3,,Broad mismatch; not recommended as a standalone target
+Hindi WFH,घर से काम महिलाओं के लिए,Google Autocomplete observed; no volume,Informational / commercial,P3,,Broad phrase; adult creator nature must be explicit
+Webcam agency,webcam model agency India,Search intent hypothesis; noisy SERP,Commercial investigation,P3,,Reassess with human SERP review and actual query data
+Cam agency,cam model agency India,Search intent hypothesis; ambiguous SERP,Commercial investigation,P3,,No volume or difficulty data

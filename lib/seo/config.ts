@@ -12,7 +12,7 @@ export const seoConfig = {
   openGraphLocale: "en_IN",
   shareImage: canonicalUrl("/opengraph-image"),
   shareImageAlt: "Stripchat India Agency — creator onboarding and Hindi support for adults 18+",
-  contactEmail: site.email,
+  ...(site.email ? { contactEmail: site.email } : {}),
   contactPhone: site.phoneRaw,
   serviceArea: {
     name: "India",
@@ -38,7 +38,7 @@ export const publicSeoPages = {
     path: "/help",
     title: "Creator Safety & Support",
     description:
-      "Find answers about creator privacy, safety, payment and changing agencies, or contact the Stripchat India Agency team by WhatsApp, phone or email. 18+ only.",
+      "Find answers about creator privacy, safety, payment and changing agencies, or contact the Stripchat India Agency team by WhatsApp or phone. 18+ only.",
   },
 } as const
 

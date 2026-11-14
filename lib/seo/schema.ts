@@ -19,7 +19,7 @@ export function createSiteSchema() {
         },
         image: seoConfig.shareImage,
         description: seoConfig.description,
-        email: seoConfig.contactEmail,
+        ...(seoConfig.contactEmail ? { email: seoConfig.contactEmail } : {}),
         telephone: seoConfig.contactPhone,
         areaServed: {
           "@type": "Country",
@@ -29,7 +29,7 @@ export function createSiteSchema() {
           "@type": "ContactPoint",
           contactType: "customer support",
           telephone: seoConfig.contactPhone,
-          email: seoConfig.contactEmail,
+          ...(seoConfig.contactEmail ? { email: seoConfig.contactEmail } : {}),
           availableLanguage: ["Hindi", "English"],
           areaServed: seoConfig.serviceArea.countryCode,
         },
