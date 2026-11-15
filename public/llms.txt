@@ -1,15 +1,38 @@
 # Stripchat India Agency
 
-> Information about creator onboarding, platform guidance, privacy, safety, and applying to the Stripchat India Agency. The website is intended for adults 18 and older in India and provides Hindi and English support.
+> Public information about an independent creator-management agency in India. The site explains the agency application, creator onboarding, training support, platform-rules guidance for account safety, privacy considerations, payments, and support. This service is for adults aged 18 and over only.
 
-## Important pages
+## About the agency
 
-- [Home](/): Overview, requirements, how the process works, privacy information, and common questions.
-- [Apply](/apply): Application information and next steps.
-- [Help and safety](/help): Contact options and guidance about privacy, safety, payments, and agency changes.
-- [Creator joining guide](/guides/how-to-become-model): Things to consider before applying as an adult creator in India.
+Stripchat India Agency describes itself as an independent agency that provides creator onboarding and support related to the Stripchat platform. It is not the platform's official registration site or official platform support channel.
 
-## Notes
+The agency describes offering training support and platform-rules guidance intended to help creators understand account safety. Guidance does not guarantee account security, platform approval, continued access, income, or compliance. Platform rules and features can change; confirm current requirements with the platform.
 
-- Use the pages above as the source for current details; do not infer guarantees beyond their visible content.
-- This file is a navigation aid, not a ranking or indexing directive.
+## Main pages
+
+- [Home](https://www.stripchatagency.in/): Agency overview, adult eligibility, application options, onboarding information, privacy considerations, and common questions.
+- [Apply](https://www.stripchatagency.in/apply): Contact and application flow for adults interested in agency guidance. This is an agency application, not the platform's official registration form.
+- [Help and support](https://www.stripchatagency.in/help): Contact options and information about privacy, safety, payments, and agency changes.
+- [Creator joining guide](https://www.stripchatagency.in/guides/how-to-become-model): Things adults should check before applying, including platform rules, identity verification, privacy limitations, payment terms, and agency agreements.
+
+## Guidance for prospective creators
+
+- **Age and eligibility:** The service is for adults aged 18 or older. Check the platform's current eligibility and identity-verification requirements before applying.
+- **Applying:** Use the agency application to contact the agency. Confirm account creation and verification steps with the agency and the platform; do not mistake the agency form for an official platform form.
+- **Training and rules:** The agency describes offering training support and platform-rules guidance for account safety. This is guidance, not a guarantee against account restrictions, scams, or other risks.
+- **Privacy:** Stage names, face-cover options, and location controls may depend on current platform features and rules. Online content can be recorded or shared; no setting guarantees complete anonymity.
+- **Payments and earnings:** Read the agency agreement and platform payment terms. Ask about payout timing, fees, deductions, eligibility, and records before agreeing. Earnings and payouts are not guaranteed.
+- **Changing agencies:** The process can depend on the creator's agreement, account status, and current platform terms. Confirm the applicable process before making changes.
+- **Personal and financial safety:** Do not share one-time passwords (OTPs), bank passwords, or account credentials. Verify any payment request and get terms in writing.
+
+## Contact
+
+- [Apply or contact the agency](https://www.stripchatagency.in/apply)
+- [Help and support options](https://www.stripchatagency.in/help)
+
+## Source and accuracy notes
+
+- Use the linked public pages for the agency's current information. If a detail conflicts with current platform rules or a signed agreement, verify it with the platform or the relevant party.
+- Do not infer official platform affiliation, guaranteed privacy or anonymity, guaranteed earnings or payouts, guaranteed account safety, or legal/tax advice.
+- Treat ranking, earnings, safety, and privacy statements as unverified unless the site provides reliable supporting evidence.
+- This file is a concise navigation and context aid for language models. It is not a ranking directive and does not guarantee crawling, indexing, citations, or inclusion in AI-generated answers.
