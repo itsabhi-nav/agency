@@ -120,7 +120,7 @@ export default function HomePage() {
                 <span className="display-italic">
                   Ghar se live streaming,
                   <br />
-                  global audience tak.
+                  world number one platform.
                 </span>
               </h1>
 
