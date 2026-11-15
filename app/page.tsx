@@ -117,10 +117,10 @@ export default function HomePage() {
                 <br />
                 Stripchat agency.
                 <br />
-                <span className="display-italic">
+                <span className="mt-3 block font-sans text-[clamp(1.125rem,2.4vw,1.75rem)] font-medium not-italic leading-snug tracking-normal text-gold">
                   Ghar se live streaming,
                   <br />
-                  world number one platform.
+                  world number 1 platform.
                 </span>
               </h1>
 
