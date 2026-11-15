@@ -117,7 +117,11 @@ export default function HomePage() {
                 <br />
                 Stripchat agency.
                 <br />
-                <span className="display-italic">Ghar se live ho.</span>
+                <span className="display-italic">
+                  Ghar se live streaming,
+                  <br />
+                  global audience tak.
+                </span>
               </h1>
 
               <p className="mt-6 max-w-xl text-[1.02rem] leading-relaxed text-ivory/65 sm:text-[1.08rem]">

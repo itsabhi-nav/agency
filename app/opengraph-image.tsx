@@ -1,7 +1,8 @@
 import { ImageResponse } from "next/og"
 import { seoConfig } from "@/lib/seo/config"
 
-export const alt = "Stripchat India Agency — creator onboarding and Hindi support for adults 18+"
+export const alt =
+  "Stripchat India Agency — training support and rules guidance for account safety; adults 18+"
 export const size = {
   width: 1200,
   height: 630,
@@ -75,7 +76,7 @@ export default function OpenGraphImage() {
               textTransform: "uppercase",
             }}
           >
-            Creator onboarding · Hindi support
+            Training support · Rules guidance for account safety
           </div>
           <div
             style={{

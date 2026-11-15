@@ -4,14 +4,15 @@ import { canonicalUrl, siteOrigin, siteUrl } from "@/lib/seo/canonical"
 export const seoConfig = {
   name: site.name,
   description:
-    "Creator onboarding and Hindi-language guidance for adults in India, including platform, privacy and application support.",
+    "Creator onboarding, training support and platform-rules guidance for account safety for adults in India.",
   origin: siteOrigin,
   url: siteUrl,
   language: "hi-Latn-IN",
   alternateLanguages: ["hi-Latn-IN", "en-IN"],
   openGraphLocale: "en_IN",
   shareImage: canonicalUrl("/opengraph-image"),
-  shareImageAlt: "Stripchat India Agency — creator onboarding and Hindi support for adults 18+",
+  shareImageAlt:
+    "Stripchat India Agency — training support and rules guidance for account safety; adults 18+",
   ...(site.email ? { contactEmail: site.email } : {}),
   contactPhone: site.phoneRaw,
   serviceArea: {
@@ -26,7 +27,7 @@ export const publicSeoPages = {
     path: "/",
     title: "Stripchat Agency in India | Creator Guidance & Apply",
     description:
-      "Looking for a Stripchat agency in India? Explore creator onboarding, platform guidance, privacy options, requirements and how to apply. Hindi support for adults 18+.",
+      "Looking for a Stripchat agency in India? Explore creator onboarding, training support, platform-rules guidance for account safety, privacy options and how to apply. Adults 18+.",
   },
   apply: {
     path: "/apply",
