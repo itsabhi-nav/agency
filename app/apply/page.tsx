@@ -50,6 +50,11 @@ export default function ApplyPage() {
                   Naam aur city bharo. Hum poori process samjhayenge, account se payment tak. Koi paisa
                   nahi lagega.
                 </p>
+                <p className="mt-4 max-w-lg text-sm leading-relaxed text-ivory/65">
+                  India mein Stripchat creator ke roop mein join karna chahte hain? Yeh 18+ adult
+                  live-streaming ke liye agency application hai, platform ka registration form nahi.
+                  Platform ki current eligibility aur verification requirements apply karne se pehle check karein.
+                </p>
 
                 <ul className="mt-8 hidden space-y-3.5 sm:block">
                   {[

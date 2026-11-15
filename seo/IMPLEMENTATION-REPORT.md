@@ -2,6 +2,13 @@
 
 **Date:** 2026-11-15
 
+## Subsequent keyword integration
+
+- Updated application and help metadata and added visible, topic-focused copy about joining, privacy, payments, and agency changes.
+- Added `/guides/how-to-become-model`, linked it in the footer and navigation aid, and included it in the shared public-route registry used by the sitemap.
+- Broad generic work-from-home keywords remain unassigned because they do not accurately describe the adult-creator service. Search demand and ranking results remain unverified.
+- Platform requirements, agency affiliation, privacy, earnings, and payout claims still require owner verification; existing site-wide claims should not be treated as independently confirmed.
+
 ## Completed
 
 - Centralized verified SEO identity, public route metadata, locale, service-area country, contact reference, and social profile list in `lib/seo/config.ts`.
@@ -21,7 +28,7 @@
 - TypeScript check succeeded.
 - Generated HTML had one unique title and description per public route; canonicals and page JSON-LD used the test origin.
 - Sitemap, robots, share-image and `llms.txt` endpoints returned 200; unknown route returned 404.
-- Sitemap includes only `/`, `/apply`, and `/help`.
+- At the time of the original validation, the sitemap included `/`, `/apply`, and `/help`. The guide was added subsequently.
 - `git diff --check` passed during implementation.
 
 ## Not completed / external

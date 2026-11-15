@@ -123,10 +123,11 @@ export default function HelpPage() {
             <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
               <Reveal>
                 <p className="eyebrow">Safety &amp; privacy</p>
-                <h2 className="display-2 mt-5 text-maroon-deep">Aap safe ho. Bas.</h2>
+                <h2 className="display-2 mt-5 text-maroon-deep">Creator privacy aur safety</h2>
                 <p className="lead mt-4">
-                  Aapki real identity, number aur address public nahi hote. Face cover, stage name aur
-                  geo-block sab available hain.
+                  Stripchat par creator privacy settings aur unki limits samajhna zaroori hai. Stage name,
+                  face cover ya location controls ke current options aur platform rules pehle check karein.
+                  Koi setting complete anonymity ki guarantee nahi deti.
                 </p>
                 <div className="mt-7 border border-gold/30 bg-ivory-2 p-5">
                   <div className="flex items-start gap-3">
@@ -174,10 +175,10 @@ export default function HelpPage() {
             <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
               <Reveal>
                 <p className="eyebrow text-gold-bright">Agency switch</p>
-                <h2 className="display-2 mt-5 text-ivory">Purani agency se pareshan ho?</h2>
+                <h2 className="display-2 mt-5 text-ivory">Stripchat agency change karna chahte ho?</h2>
                 <p className="mt-4 text-[1.02rem] leading-relaxed text-ivory/65">
-                  Low token rate, late payment, work pressure ya block ka dar. In sab ka solution hai.
-                  Switch karo aur tension chhodo.
+                  Payment, work pressure ya account se jude sawaal hain? Agency switch se pehle apna
+                  agreement aur platform ke current rules check karein; process aapki situation par depend karega.
                 </p>
                 <a
                   href={waLink("Hi! Main agency switch karna chahti hoon. Please guide karo.")}
@@ -209,6 +210,27 @@ export default function HelpPage() {
                 </div>
               </Reveal>
             </div>
+          </div>
+        </section>
+
+        <section className="section-ivory section-pad">
+          <div className="container-x max-w-3xl">
+            <p className="eyebrow">Payment support</p>
+            <h2 className="display-2 mt-5 text-maroon-deep">Payment aur agency support</h2>
+            <p className="lead mt-4">
+              Apply karne se pehle payout schedule, fees, deductions aur payment ka record kaise milega,
+              yeh agency se samajh lein. Apne agreement aur platform ki current payment terms bhi check karein.
+              Payout ya earnings ki guarantee nahi di ja sakti.
+            </p>
+            <a
+              href={waLink("Hi! Mujhe payment aur agency support ke baare mein jaanna hai.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-base btn-wa mt-6 px-6 py-3.5 text-[0.62rem]"
+            >
+              Payment ke baare mein poocho
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </a>
           </div>
         </section>
 

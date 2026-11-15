@@ -30,15 +30,21 @@ export const publicSeoPages = {
   },
   apply: {
     path: "/apply",
-    title: "Apply to Join",
+    title: "Apply as a Stripchat Creator in India",
     description:
-      "Start the free application for adults 18+. Review the requirements, share basic details and speak with the Stripchat India Agency team on WhatsApp.",
+      "Interested in joining Stripchat as a creator in India? Adults 18+ can apply to the agency and ask about registration, privacy and next steps.",
   },
   help: {
     path: "/help",
-    title: "Creator Safety & Support",
+    title: "Creator Privacy, Payment & Agency Support",
     description:
-      "Find answers about creator privacy, safety, payment and changing agencies, or contact the Stripchat India Agency team by WhatsApp or phone. 18+ only.",
+      "Ask about Stripchat creator privacy settings, payments and changing agencies. Contact the India agency for guidance and support for adults 18+.",
+  },
+  guide: {
+    path: "/guides/how-to-become-model",
+    title: "How to Become a Stripchat Creator in India",
+    description:
+      "Learn what to consider before applying as an adult Stripchat creator in India, including eligibility, privacy, payments and agency support.",
   },
 } as const
 

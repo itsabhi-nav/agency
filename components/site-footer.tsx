@@ -49,6 +49,7 @@ export default function SiteFooter() {
                   { href: "/", label: "Home" },
                   { href: "/apply", label: "Apply" },
                   { href: "/help", label: "Madad / Help" },
+                  { href: "/guides/how-to-become-model", label: "Creator joining guide" },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link

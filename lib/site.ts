@@ -128,19 +128,19 @@ export const earnings = [
 export const privacyPoints = [
   {
     title: "Face cover, mask, niqab ya hijab",
-    body: "Aapka face chhupa rahega. Sirf aapki marzi, koi pressure nahi.",
+    body: "Face cover ke options aur un par platform ke current rules pehle check karein.",
   },
   {
     title: "Stage name, real name nahi",
-    body: "Public profile par sirf aapka stage name dikhega. Real ID sirf verification ke liye.",
+    body: "Public profile par kya dikhega aur verification ke liye kya chahiye, platform par check karein.",
   },
   {
-    title: "Apna city / state block karo",
-    body: "Geo-block se aapke area ke log aapki profile nahi dekh payenge.",
+    title: "Location controls",
+    body: "Available geo-block settings aur unki limitations samajh lein; privacy ki guarantee nahi hoti.",
   },
   {
-    title: "Family aur friends se private",
-    body: "Aapki personal details, number aur address public nahi hote.",
+    title: "Personal details ki safety",
+    body: "Public profile aur stream mein personal details share karne se pehle privacy settings check karein.",
   },
 ]
 
@@ -291,7 +291,7 @@ export const faqs = [
   },
   {
     q: "Kya main face chhupa kar live ja sakti hoon?",
-    a: "Haan. Mask, niqab, hijab ya face cover, sab aapki marzi. Aap stage name bhi use kar sakti hain aur apna city geo-block kar sakti hain.",
+    a: "Face cover aur privacy options ke liye platform ke current rules aur settings check karein. Kisi bhi setting se complete anonymity ki guarantee nahi hoti.",
   },
   {
     q: "Kya ye safe aur legal hai?",
