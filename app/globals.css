@@ -829,6 +829,80 @@ select.field-input {
     radial-gradient(circle at 78% 30%, rgba(196, 162, 106, 0.2), transparent 46%);
 }
 
+/* ---------- Hero tagline plate ---------- */
+
+.hero-plate {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      160deg,
+      rgba(220, 192, 138, 0.12) 0%,
+      rgba(196, 162, 106, 0.04) 46%,
+      rgba(78, 18, 28, 0.22) 100%
+    );
+  border: 1px solid rgba(196, 162, 106, 0.3);
+  box-shadow:
+    inset 0 1px 0 rgba(220, 192, 138, 0.16),
+    0 30px 60px -48px rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(4px);
+}
+
+.hero-plate::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--gold-bright) 20%, var(--gold) 80%, transparent);
+}
+
+.hero-plate::after {
+  content: "";
+  position: absolute;
+  inset: -30% -10%;
+  z-index: 1;
+  background: linear-gradient(115deg, transparent 34%, rgba(244, 238, 227, 0.08) 48%, transparent 62%);
+  pointer-events: none;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(96deg, #f3e3c2 0%, var(--gold-bright) 38%, var(--gold) 68%, #f0dcb4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.live-dot {
+  position: relative;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  flex: none;
+  border-radius: 9999px;
+  background: var(--gold-bright);
+  animation: live-pulse 2.8s ease-out infinite;
+}
+
+@keyframes live-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 192, 138, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(220, 192, 138, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 192, 138, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-dot {
+    animation: none;
+  }
+}
+
 .vertical-label {
   writing-mode: vertical-rl;
   text-orientation: mixed;

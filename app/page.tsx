@@ -116,11 +116,25 @@ export default function HomePage() {
                 India ki verified
                 <br />
                 Stripchat agency.
-                <br />
-                <span className="mt-3 block font-sans text-[clamp(1.125rem,2.4vw,1.75rem)] font-medium not-italic leading-snug tracking-normal text-gold">
-                  Ghar se live streaming,
-                  <br />
-                  world number 1 platform.
+
+                <span className="hero-plate mt-6 block w-fit max-w-full px-5 py-4 sm:mt-7 sm:px-7 sm:py-5">
+                  <span className="relative z-[2] flex items-center gap-2.5">
+                    <span className="live-dot" aria-hidden="true" />
+                    <span className="font-label text-[0.5rem] font-bold uppercase tracking-[0.3em] text-gold-bright">
+                      Live
+                    </span>
+                    <span
+                      className="h-px w-10 bg-gradient-to-r from-gold/70 to-transparent sm:w-16"
+                      aria-hidden="true"
+                    />
+                  </span>
+
+                  <span className="relative z-[2] mt-3 block font-display text-[clamp(1.15rem,2.1vw,1.4rem)] italic leading-[1.25] tracking-normal text-ivory/90">
+                    Ghar se live streaming,
+                  </span>
+                  <span className="text-gold-gradient relative z-[2] mt-1 block font-display text-[clamp(1.5rem,2.9vw,2.05rem)] leading-[1.1] tracking-normal">
+                    world no. 1 platform.
+                  </span>
                 </span>
               </h1>
 
