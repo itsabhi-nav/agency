@@ -55,6 +55,8 @@ import {
   whyUs,
 } from "@/lib/site"
 import { publicSeoPages } from "@/lib/seo/config"
+import { createFaqSchema } from "@/lib/seo/schema"
+import { serializeJsonLd } from "@/lib/seo-utils/validation"
 
 const requirementIcons = {
   age: BadgeCheck,
@@ -93,6 +95,10 @@ export default function HomePage() {
         name={publicSeoPages.home.title}
         description={publicSeoPages.home.description}
         path={publicSeoPages.home.path}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(createFaqSchema(faqs)) }}
       />
       <SiteHeader />
 
