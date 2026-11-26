@@ -12,6 +12,7 @@ export function createSiteSchema() {
         "@type": "Organization",
         "@id": organizationId,
         name: seoConfig.name,
+        alternateName: "Stripchat India",
         url: seoConfig.origin,
         logo: {
           "@type": "ImageObject",
@@ -40,6 +41,7 @@ export function createSiteSchema() {
         "@id": `${canonicalUrl("/")}#website`,
         url: seoConfig.origin,
         name: seoConfig.name,
+        alternateName: "Stripchat India",
         inLanguage: [...seoConfig.alternateLanguages],
         publisher: { "@id": organizationId },
       },
