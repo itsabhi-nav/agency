@@ -1176,6 +1176,63 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* CREATOR GUIDES */}
+        <section id="guides" className="section-ivory section-pad relative overflow-hidden">
+          <div className="container-x">
+            <Reveal>
+              <p className="eyebrow">Helpful creator guides</p>
+              <h2 className="display-2 mt-5 text-maroon-deep">Stripchat joining aur privacy guides</h2>
+              <p className="lead mt-4 max-w-2xl">
+                Account setup, eligibility, platform rules aur privacy options ko step by step samjhein before applying.
+              </p>
+            </Reveal>
+
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                {
+                  href: "/guides/how-to-join-stripchat",
+                  title: "How to join Stripchat",
+                  description: "Eligibility, registration, KYC aur agency terms ka complete overview.",
+                },
+                {
+                  href: "/guides/stripchat-account-kaise-banaye",
+                  title: "Stripchat account kaise banaye",
+                  description: "Hindi mein account banane aur verification ke practical steps.",
+                },
+                {
+                  href: "/guides/stripchat-creator-privacy",
+                  title: "Creator privacy guide",
+                  description: "Face, location, profile aur identity privacy ki limits samjhein.",
+                },
+                {
+                  href: "/stripchat-india",
+                  title: "Stripchat India",
+                  description: "India-based creator support aur all important guides one place.",
+                },
+              ].map((guide, index) => (
+                <Reveal key={guide.href} delay={index * 70}>
+                  <Link
+                    href={guide.href}
+                    className="group flex h-full min-h-[13rem] flex-col border border-gold/25 bg-white p-6 transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1 hover:border-gold/70 hover:shadow-[0_18px_45px_-35px_rgba(78,18,28,0.55)]"
+                  >
+                    <span className="font-label text-[0.52rem] font-semibold uppercase tracking-[0.18em] text-gold-ink">
+                      Creator guide
+                    </span>
+                    <h3 className="mt-4 font-display text-[1.35rem] leading-tight text-maroon-deep">
+                      {guide.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-ink-muted">{guide.description}</p>
+                    <span className="mt-auto inline-flex items-center gap-2 pt-5 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-maroon">
+                      Guide padhein
+                      <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    </span>
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section id="faq" className="section-lift section-pad relative overflow-hidden">
           <div className="container-x">

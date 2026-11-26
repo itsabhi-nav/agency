@@ -50,6 +50,10 @@ export default function SiteFooter() {
                   { href: "/apply", label: "Apply" },
                   { href: "/help", label: "Madad / Help" },
                   { href: "/guides/how-to-become-model", label: "Creator joining guide" },
+                  { href: "/guides/how-to-join-stripchat", label: "How to join Stripchat" },
+                  { href: "/guides/stripchat-account-kaise-banaye", label: "Stripchat account guide" },
+                  { href: "/guides/stripchat-creator-privacy", label: "Creator privacy guide" },
+                  { href: "/stripchat-india", label: "Stripchat India" },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link

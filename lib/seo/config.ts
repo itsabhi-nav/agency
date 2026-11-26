@@ -59,6 +59,30 @@ export const publicSeoPages = {
     description:
       "A Hindi explainer video for adults about account setup, creator work and agency support.",
   },
+  join: {
+    path: "/guides/how-to-join-stripchat",
+    title: "How to Join Stripchat from India",
+    description:
+      "Step-by-step guidance for adults in India on Stripchat account joining, eligibility, KYC, privacy and independent agency support.",
+  },
+  account: {
+    path: "/guides/stripchat-account-kaise-banaye",
+    title: "Stripchat Account Kaise Banaye",
+    description:
+      "Adults 18+ ke liye Stripchat account banane, identity verification, privacy settings aur safe registration process ki Hindi guide.",
+  },
+  privacy: {
+    path: "/guides/stripchat-creator-privacy",
+    title: "Stripchat Creator Privacy Guide for India",
+    description:
+      "Learn about stage names, face privacy, profile visibility, location safety and privacy limits before joining Stripchat.",
+  },
+  india: {
+    path: "/stripchat-india",
+    title: "Stripchat India Agency",
+    description:
+      "Hindi-speaking Stripchat creator guidance and agency support for adults in India, including account setup, privacy and payments.",
+  },
 } as const
 
 export const indexablePublicRoutes = Object.values(publicSeoPages)

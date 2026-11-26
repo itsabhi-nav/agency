@@ -13,6 +13,7 @@ export const site = {
   nav: [
     { href: "/", label: "Home" },
     { href: "/#about", label: "Agency" },
+    { href: "/guides/how-to-become-model", label: "Guides" },
     { href: "/apply", label: "Apply" },
     { href: "/help", label: "Madad" },
   ],
