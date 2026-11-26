@@ -49,6 +49,7 @@ export default function SiteFooter() {
                   { href: "/", label: "Home" },
                   { href: "/apply", label: "Apply" },
                   { href: "/help", label: "Madad / Help" },
+                  { href: "/privacy", label: "Privacy policy" },
                   { href: "/guides/how-to-become-model", label: "Creator joining guide" },
                   { href: "/guides/how-to-join-stripchat", label: "How to join Stripchat" },
                   { href: "/guides/stripchat-account-kaise-banaye", label: "Stripchat account guide" },

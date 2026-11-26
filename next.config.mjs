@@ -11,7 +11,6 @@ const nextConfig = {
       { source: "/requirements", destination: "/#requirements", permanent: true },
       { source: "/faq", destination: "/help#faq", permanent: true },
       { source: "/contact", destination: "/help", permanent: true },
-      { source: "/privacy", destination: "/help", permanent: true },
     ]
   },
 }

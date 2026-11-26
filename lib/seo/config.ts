@@ -53,6 +53,12 @@ export const publicSeoPages = {
     description:
       "Terms for using the Stripchat India Agency website, including eligibility, earnings information and responsible use.",
   },
+  privacyPolicy: {
+    path: "/privacy",
+    title: "Privacy Policy",
+    description:
+      "How Stripchat India Agency handles website enquiries, WhatsApp contact information, document requests and creator privacy.",
+  },
   explainerVideo: {
     path: "/videos/stripchat-explainer",
     title: "How Stripchat Creator Work Works",
