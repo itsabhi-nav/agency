@@ -6,16 +6,35 @@ import SiteHeader from "@/components/site-header"
 import WhatsAppFloat from "@/components/whatsapp-float"
 import { publicSeoPages } from "@/lib/seo/config"
 import { createPageMetadata } from "@/lib/seo/metadata"
+import { createHowToSchema } from "@/lib/seo/schema"
+import { serializeJsonLd } from "@/lib/seo-utils/validation"
 
 export const metadata = createPageMetadata(publicSeoPages.join)
 
 export default function HowToJoinStripchatPage() {
+  const howToSchema = createHowToSchema({
+    name: "How to join Stripchat from India",
+    description: "A safety-focused joining process for adults researching Stripchat in India.",
+    steps: [
+      { name: "Check eligibility", text: "Confirm that you are at least 18 and meet the platform's current identity and geographic requirements." },
+      { name: "Complete official registration", text: "Create the account through official Stripchat channels and keep your password and OTP private." },
+      { name: "Complete identity verification", text: "Submit identity documents only through official platform verification channels." },
+      { name: "Set privacy controls", text: "Review stage name, face, profile, location and visibility options before going live." },
+      { name: "Review agency terms", text: "Confirm revenue share, payout schedule, account ownership, deductions and exit terms before signing." },
+      { name: "Learn platform rules", text: "Review prohibited content and account rules before broadcasting." },
+    ],
+  })
+
   return (
     <div className="min-h-screen bg-ivory">
       <PageStructuredData
         name={publicSeoPages.join.title}
         description={publicSeoPages.join.description}
         path={publicSeoPages.join.path}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(howToSchema) }}
       />
       <SiteHeader />
       <main id="main" className="section-ivory section-pad">

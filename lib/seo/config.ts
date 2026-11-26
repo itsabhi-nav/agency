@@ -83,6 +83,12 @@ export const publicSeoPages = {
     description:
       "Hindi-speaking Stripchat creator guidance and agency support for adults in India, including account setup, privacy and payments.",
   },
+  choosingAgency: {
+    path: "/guides/choose-stripchat-agency",
+    title: "How to Choose a Stripchat Agency in India",
+    description:
+      "A transparent checklist for adults comparing Stripchat agencies in India: revenue share, payments, account ownership, exit terms and privacy.",
+  },
 } as const
 
 export const indexablePublicRoutes = Object.values(publicSeoPages)

@@ -1193,7 +1193,7 @@ export default function HomePage() {
               </p>
             </Reveal>
 
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
               {[
                 {
                   href: "/guides/how-to-join-stripchat",
@@ -1214,6 +1214,11 @@ export default function HomePage() {
                   href: "/stripchat-india",
                   title: "Stripchat India",
                   description: "India-based creator support aur all important guides one place.",
+                },
+                {
+                  href: "/guides/choose-stripchat-agency",
+                  title: "Agency comparison checklist",
+                  description: "Revenue, payout, account ownership, exit and privacy terms compare karein.",
                 },
               ].map((guide, index) => (
                 <Reveal key={guide.href} delay={index * 70}>

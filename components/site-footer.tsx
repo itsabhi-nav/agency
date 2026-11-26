@@ -53,6 +53,7 @@ export default function SiteFooter() {
                   { href: "/guides/how-to-join-stripchat", label: "How to join Stripchat" },
                   { href: "/guides/stripchat-account-kaise-banaye", label: "Stripchat account guide" },
                   { href: "/guides/stripchat-creator-privacy", label: "Creator privacy guide" },
+                  { href: "/guides/choose-stripchat-agency", label: "Choose a Stripchat agency" },
                   { href: "/stripchat-india", label: "Stripchat India" },
                 ].map((link) => (
                   <li key={link.href}>
