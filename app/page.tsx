@@ -435,6 +435,12 @@ export default function HomePage() {
                         </span>
                       </div>
                       <p className="mt-2 text-[0.82rem] leading-relaxed text-ivory/50">{video.caption}</p>
+                      <Link
+                        href="/videos/stripchat-explainer"
+                        className="mt-3 inline-flex items-center gap-2 text-[0.72rem] font-semibold text-gold-bright underline underline-offset-4"
+                      >
+                        Full watch page <ArrowUpRight className="h-3.5 w-3.5" />
+                      </Link>
                     </figcaption>
                   </figure>
                 </Reveal>

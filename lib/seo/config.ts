@@ -47,6 +47,18 @@ export const publicSeoPages = {
     description:
       "Learn what to consider before applying as an adult Stripchat creator in India, including eligibility, privacy, payments and agency support.",
   },
+  terms: {
+    path: "/terms",
+    title: "Website Terms",
+    description:
+      "Terms for using the Stripchat India Agency website, including eligibility, earnings information and responsible use.",
+  },
+  explainerVideo: {
+    path: "/videos/stripchat-explainer",
+    title: "How Stripchat Creator Work Works",
+    description:
+      "A Hindi explainer video for adults about account setup, creator work and agency support.",
+  },
 } as const
 
 export const indexablePublicRoutes = Object.values(publicSeoPages)

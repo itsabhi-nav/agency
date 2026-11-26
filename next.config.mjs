@@ -12,7 +12,6 @@ const nextConfig = {
       { source: "/faq", destination: "/help#faq", permanent: true },
       { source: "/contact", destination: "/help", permanent: true },
       { source: "/privacy", destination: "/help", permanent: true },
-      { source: "/terms", destination: "/help", permanent: true },
     ]
   },
 }
